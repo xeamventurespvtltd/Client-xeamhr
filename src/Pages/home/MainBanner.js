@@ -3,9 +3,7 @@ import Navbar from "../../components/Navbar"
 const MainBanner = ({ heading, subHeading }) => {
   return (
     <section className="main-banner">
-      <div className="container-fluid">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="container">
         <div className="banner-content">
           <div className="banner-body">

@@ -17,7 +17,7 @@ const AboutUs = ({ title, content1, content2 }) => {
                 <h2>{title}</h2>
                 <p>{content1}</p>
                 <p className="mb-3">{content2}</p>
-                <NavLink to="#"><u>Read More</u><i className="bi bi-chevron-right"></i><i className="bi bi-chevron-right"></i></NavLink>
+                <NavLink to="#"><u>Read More</u> <i className="fas fa-chevron-right"></i><i className="fas fa-chevron-right"></i></NavLink>
               </div>
             </div>
           </div>

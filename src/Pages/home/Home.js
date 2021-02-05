@@ -3,8 +3,10 @@ import MainBanner from "./MainBanner"
 import AboutUs from "./AboutUs"
 import HrService from "./HrService"
 import Features from "./Features"
-import BigFooter from "../footer/BigFooter"
-import SmallFooter from "../footer/SmallFooter"
+import Review from "../Home/Reviews"
+import BigFooter from "../Footer/BigFooter"
+import SmallFooter from "../Footer/SmallFooter"
+
 const Home = () => {
   return (
     <>
@@ -15,6 +17,7 @@ const Home = () => {
       />
       <HrService />
       <Features />
+      <Review />
       <BigFooter title="Logo" />
       <SmallFooter />
     </>

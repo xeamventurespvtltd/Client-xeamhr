@@ -7,24 +7,24 @@ import Footer4 from "./Footer4"
 const Footer = ({ logo }) => {
   return (
     <>
-      <footer class="footer1">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-10 mx-auto">
-              <div class="footer-title">
+      <footer className="footer1">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-10 mx-auto">
+              <div className="footer-title">
                 <h2>{logo}</h2>
               </div>
-              <div class="row">
-                <div class="col-md-3 col-sm-6 mb-3">
+              <div className="row">
+                <div className="col-md-3 col-sm-6 mb-3">
                   <Footer1 title="Contact Us" />
                 </div>
-                <div class="col-md-3 col-sm-6 mb-3">
+                <div className="col-md-3 col-sm-6 mb-3">
                   <Footer2 title="Pages" />
                 </div>
-                <div class="col-md-3 col-sm-6 mb-3">
+                <div className="col-md-3 col-sm-6 mb-3">
                   <Footer3 title="Our Services" />
                 </div>
-                <div class="col-md-3 col-sm-6 mb-3">
+                <div className="col-md-3 col-sm-6 mb-3">
                   <Footer4 title="Subscribe to XEAMHR via Email"
                     para="Excepteur sint occaecat cupidata njo prodiiont, sunt in cupta qui offica"
                   />
@@ -34,8 +34,6 @@ const Footer = ({ logo }) => {
           </div>
         </div>
       </footer>
-
-
     </>
   )
 }

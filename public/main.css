@@ -94,8 +94,12 @@ a:hover {
 
 .nav-item a {
   color: #fff !important;
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
   margin: 0 .4rem;
+}
+
+.menu-body.show {
+  z-index: 10;
 }
 
 
@@ -107,8 +111,9 @@ a:hover {
   position: relative;
 }
 
-.myNumber button i {
-  color: #fff;
+.myNavbar button {
+  border: 1px solid #fff !important;
+  color: #fff !important;
 }
 
 .demo-button {
@@ -228,8 +233,6 @@ a:hover {
 .about-content a {
   color: rgb(66, 206, 161);
   font-size: 1.5rem;
-  display: flex;
-  align-items: center;
 }
 
 .about-content a>i {
@@ -256,27 +259,34 @@ a:hover {
 
 .service-section .owl-nav>.owl-next {
   position: absolute;
-  top: 40%;
+  top: 38%;
   right: -65px;
 }
 
 .service-section .owl-nav>.owl-prev {
   position: absolute;
-  top: 40%;
+  top: 38%;
   left: -50px;
 }
 
-.service-section .owl-nav button>i {
-  font-size: 1.45rem;
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgb(25, 90, 158);
+.service-section .owl-nav button>span {
+  font-size: 2.5rem;
+  width: 45px;
+  height: 45px;
+  padding: 0px 4px 5px 5px;
+  border: 2px solid rgb(25, 90, 158);
   border-radius: 50%;
   color: rgb(66, 206, 161);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.owl-carousel .owl-stage-outer {
+  /* override */
+  overflow: initial;
+}
+
 
 .service-section .owl-nav button:hover,
 .service-section .owl-nav button:focus {
@@ -294,16 +304,24 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   border: 1px solid #ddd;
   cursor: pointer;
   position: relative;
-  transition: all 0.21s ease-in-out;
+  transition: outline 0.25s ease-in-out;
 }
 
-.hr-box:hover {
+.hr-box:hover,
+.hr-box:focus,
+.hr-box:active {
   outline: 5px solid rgb(66, 206, 161);
-  outline-offset: 8px;
-  transition: all 0.21s ease-out;
+  outline-offset: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.hr-box.active {
+  outline: 5px solid rgb(66, 206, 161);
+  outline-offset: 7px;
 }
 
 .hr-box img {
@@ -324,6 +342,13 @@ a:hover {
   color: #222;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+}
+
+.service-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .service-image img {
@@ -441,148 +466,6 @@ a:hover {
   color: #555555;
   font-size: 1.15rem;
   line-height: 1.3;
-}
-
-/* Media Queries starts here */
-@media screen and (max-width: 990px) {
-  .demo-button {
-    position: absolute;
-    top: 29px;
-    right: 90px;
-    width: 200px;
-  }
-
-  .banner-body h1 {
-    font-size: 3rem;
-  }
-
-  .banner-body h5 {
-    font-size: 1.15rem;
-  }
-
-  .banner-body a {
-    font-size: 1.5rem;
-  }
-
-  .about-img img {
-    width: 100%;
-  }
-
-  .about-content {
-    padding: 2rem 0;
-  }
-
-  .about-content p {
-    font-size: 1.15rem;
-  }
-
-  .about-content a {
-    font-size: 1.4rem;
-  }
-
-  .service-title h1 {
-    font-size: 2.8rem;
-  }
-
-  .service-image img {
-    max-width: 100%;
-  }
-
-  .atten-box h2 {
-    font-size: 1.85rem;
-  }
-
-  .service-list li>i {
-    padding-top: 3px;
-  }
-
-  .service-btn a {
-    font-weight: 1.4rem;
-  }
-
-  .feature-title h1 {
-    font-size: 2.8rem;
-  }
-
-  .review-section h1 {
-    font-size: 2.8rem;
-  }
-}
-
-@media screen and (max-width: 691px) {
-  .demo-button {
-    top: 30px;
-  }
-
-  .banner-body h1 {
-    font-size: 2.8rem;
-  }
-
-  .banner-body a {
-    font-size: 1.42rem;
-  }
-
-  .about-img img {
-    width: 60%;
-  }
-
-  .down-arrow {
-    transform: translate(-50%, 300%);
-  }
-
-  .about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .about-content p {
-    font-size: 1.1rem;
-  }
-
-  .about-content a {
-    font-size: 1.3rem;
-  }
-
-  .service-title h1 {
-    font-size: 2.5rem;
-  }
-
-  .service-list li>i {
-    padding-top: 4px;
-    font-size: 0.95rem
-  }
-
-  .service-btn a {
-    font-weight: 1.3rem;
-  }
-
-  .service-list li>h5 {
-    font-size: 1.1rem;
-  }
-
-  .feature-title h1 {
-    font-size: 2.5rem;
-  }
-
-  .feature-box i {
-    font-size: 4.5rem;
-  }
-
-  .feature-box h4 {
-    font-size: 1.75rem;
-  }
-
-  .feature-box p {
-    font-size: 1.12rem;
-  }
-
-  .review-section h1 {
-    font-size: 2.5rem
-  }
-
-  .info-image i {
-    padding: 2.3rem;
-  }
 }
 
 /* ===========customer review section=========== */
@@ -786,54 +669,157 @@ footer.footer1 {
   font-size: 1.05rem;
 }
 
+/* Media Queries starts here */
+@media screen and (max-width: 990px) {
+  .menu-body {
+    background: linear-gradient(90deg, rgb(25, 90, 158, 0.9) 40%, rgb(66, 206, 161) 100%)
+  }
+
+  .demo-button {
+    position: absolute;
+    top: 29px;
+    right: 90px;
+    width: 200px;
+  }
+
+  .banner-body h1 {
+    font-size: 3rem;
+  }
+
+  .banner-body h5 {
+    font-size: 1.15rem;
+  }
+
+  .banner-body a {
+    font-size: 1.5rem;
+  }
+
+  .about-img img {
+    width: 100%;
+  }
+
+  .about-content {
+    padding: 2rem 0;
+  }
+
+  .about-content p {
+    font-size: 1.15rem;
+  }
+
+  .about-content a {
+    font-size: 1.4rem;
+  }
+
+  .service-title h1 {
+    font-size: 2.8rem;
+  }
+
+  .service-image img {
+    max-width: 100%;
+  }
+
+  .atten-box h2 {
+    font-size: 1.85rem;
+  }
+
+  .service-list li>i {
+    padding-top: 3px;
+  }
+
+  .service-btn a {
+    font-weight: 1.4rem;
+  }
+
+  .feature-title h1 {
+    font-size: 2.8rem;
+  }
+
+  .review-section h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 691px) {
+  .demo-button {
+    top: 30px;
+  }
+
+  .banner-body h1 {
+    font-size: 2.8rem;
+  }
+
+  .banner-body a {
+    font-size: 1.42rem;
+  }
+
+  .about-img img {
+    width: 60%;
+  }
+
+  .down-arrow {
+    transform: translate(-50%, 300%);
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+  }
+
+  .about-content a {
+    font-size: 1.3rem;
+  }
+
+  .service-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .service-list li>i {
+    padding-top: 4px;
+    font-size: 0.95rem
+  }
+
+  .service-btn a {
+    font-weight: 1.3rem;
+  }
+
+  .service-list li>h5 {
+    font-size: 1.1rem;
+  }
+
+  .feature-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .feature-box i {
+    font-size: 4.5rem;
+  }
+
+  .feature-box h4 {
+    font-size: 1.75rem;
+  }
+
+  .feature-box p {
+    font-size: 1.12rem;
+  }
+
+  .review-section h1 {
+    font-size: 2.5rem
+  }
+
+  .info-image i {
+    padding: 2.3rem;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .banner-body h1 {
     font-size: 2.5rem;
   }
 
-  .banner-body h5 {
-    font-size: 1.1rem;
-  }
-
-  .banner-body a {
-    font-size: 1.35rem;
-    padding: 0.4rem 2.2rem;
-  }
-
-  .down-arrow a {
-    width: 55px;
-    height: 55px;
-  }
-
-  .about-img img {
-    width: 55%;
-  }
-
-  .service-title h1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .demo-button a {
-    font-size: 1.1rem;
-  }
-
-  .banner-body h1 {
-    font-size: 2.2rem;
-  }
-
-  .banner-body h5 {
-    font-size: 1.05rem;
-  }
-
-  .banner-body a {
-    font-size: 1.3rem;
-    padding: 0.4rem 2rem;
-  }
-}
-
-@media screen and (max-width: 575px) {
   .demo-button {
     top: 31px;
     width: 150px;
@@ -847,8 +833,16 @@ footer.footer1 {
     font-size: 2rem;
   }
 
+  .service-title h1 {
+    font-size: 2.2rem;
+  }
+
   .banner-body h5 {
     font-size: 1.01rem;
+  }
+
+  .about-img img {
+    width: 55%;
   }
 
   .banner-body a {
@@ -857,11 +851,16 @@ footer.footer1 {
   }
 
   .service-section .owl-nav>.owl-next {
-    right: -45px;
+    right: -56px;
   }
 
   .service-section .owl-nav>.owl-prev {
-    left: -35px;
+    left: -40px;
+  }
+
+  .service-section .owl-nav button>span {
+    width: 40px;
+    height: 40px;
   }
 
   .service-section .owl-nav button>i {

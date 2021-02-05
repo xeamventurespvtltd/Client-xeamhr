@@ -1,15 +1,15 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
-import { dataFooter3 } from "../../components/Data"
+import { dataFooter3 } from "../Data"
 
 const Footer3 = ({ title }) => {
   return (
     <>
-      <div class="footer-body">
+      <div className="footer-body">
         <h3>{title}</h3>
         {
-          dataFooter3.map((data) => {
-            return <NavLink to={data.loc}>{data.link}</NavLink>
+          dataFooter3.map((data, ind) => {
+            return <NavLink to={data.loc} key={ind}>{data.link}</NavLink>
           })
         }
       </div>

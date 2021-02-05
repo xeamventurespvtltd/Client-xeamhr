@@ -1,6 +1,6 @@
 import React from "react"
 import FeatureCard from "../../components/FeatureCard"
-import { featureData } from "../../components/Data"
+import { featureData } from "../Data"
 
 
 const Features = () => {
@@ -18,8 +18,7 @@ const Features = () => {
               <div className="row">
                 {
                   featureData.map((data, ind) => {
-                    return <FeatureCard
-                      ind={ind}
+                    return <FeatureCard key={ind}
                       title={data.title}
                       para={data.para}
                     />

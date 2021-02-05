@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from "./Pages//home/Home";
+import Home from "./Pages/Home/Home";
 import About from "./Pages/About"
 import Feature from "./Pages/Feature"
 import Service from "./Pages/Services"
