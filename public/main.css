@@ -615,6 +615,7 @@ footer.footer1 {
 
 .footer-body a:hover {
   color: rgb(66, 206, 161);
+  text-decoration: underline !important;
   transition: all 0.25s linear;
 }
 

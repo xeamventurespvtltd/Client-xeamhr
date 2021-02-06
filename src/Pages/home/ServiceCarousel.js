@@ -2,26 +2,43 @@ import React from "react";
 import OwlCarousel from "react-owl-carousel"
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-// import { carouselImage } from "../Data"
 
 const OwlDemo1 = (props) => {
-
-
-
+  console.log("rendered")
   const looper = props.services.map((data, ind) => {
-    return (
-      <div key={ind} className="item">
-        <div
-          className={data.active ? 'hr-box active' : 'hr-box'}
-          onClick={() => {
-            props.imageClicked(data.id, data)
-          }}
-        >
-          <img src={data.icon} alt="hr" />
-          <p>{data.name}</p>
+    // console.log(data)
+    console.log("serviceId", props.Id)
+    console.log("serviceInd", ind)
+    if (ind === props.Id) {
+      return (
+        <div key={ind} className="item">
+          <div
+            className="hr-box active"
+            onClick={(e) => {
+              props.imageClicked(e, data.id, data)
+            }}
+          >
+            <img src={data.icon} alt="hr" />
+            <p>{data.name}</p>
+          </div>
         </div>
-      </div>
-    )
+      )
+    } else {
+      return (
+        <div key={ind} className="item">
+          <div
+            className="hr-box"
+            onClick={(e) => {
+              props.imageClicked(e, data.id, data)
+            }}
+          >
+            <img src={data.icon} alt="hr" />
+            <p>{data.name}</p>
+          </div>
+        </div>
+      )
+    }
+
   })
   return (
     <>
@@ -32,12 +49,9 @@ const OwlDemo1 = (props) => {
         responsive={props.responsive}
       >
         {looper}
-
       </OwlCarousel>
     </>
   )
-
 }
-
-//export default React.memo(OwlDemo1)
-export default OwlDemo1
+export default React.memo(OwlDemo1)
+// export default OwlDemo1
