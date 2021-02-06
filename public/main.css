@@ -247,28 +247,6 @@ a:hover {
   background: #f8f8f8;
 }
 
-.service-section .owl-theme .owl-dots {
-  display: none;
-}
-
-.owl-demo1 {
-  margin: 2.5rem 0;
-  position: relative;
-  /* padding: 2rem 0; */
-}
-
-.service-section .owl-nav>.owl-next {
-  position: absolute;
-  top: 38%;
-  right: -65px;
-}
-
-.service-section .owl-nav>.owl-prev {
-  position: absolute;
-  top: 38%;
-  left: -50px;
-}
-
 .service-section .owl-nav button>span {
   font-size: 2.5rem;
   width: 45px;
@@ -282,25 +260,10 @@ a:hover {
   justify-content: center;
 }
 
-.owl-carousel .owl-stage-outer {
-  /* override */
-  overflow: initial;
-}
-
-
-.service-section .owl-nav button:hover,
-.service-section .owl-nav button:focus {
-  background: transparent !important;
-  outline: none;
-}
-
-.service-section .owl-stage-outer {
-  padding: 2rem 1rem;
-}
 
 .hr-box {
   background: #fff;
-  padding: 1.5rem 0;
+  padding: 0.8rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,23 +274,53 @@ a:hover {
   transition: outline 0.25s ease-in-out;
 }
 
-.hr-box:hover,
+.slick-list {
+  padding: 2rem 0 !important;
+}
+
+.slick-list {
+  margin: 0 -5px 0 12px !important;
+  padding: 1rem 0
+}
+
+
+.slick-slide>div {
+  padding: 1rem !important;
+}
+
+.slick-next:before {
+  color: rgb(25, 90, 158) !important;
+  font-size: 2rem !important;
+}
+
+.slick-prev:before {
+  color: rgb(25, 90, 158) !important;
+  font-size: 2rem !important;
+}
+
+.slick-list .slick-slide>div:focus {
+  outline: 2px solid rgb(66, 206, 161) !important;
+  outline-offset: 1px !important;
+}
+
+/* .hr-focus:focus .slick-slide {
+  outline: 3px solid rgb(66, 206, 161) !important;
+  outline-offset: 1px !important;
+} */
+
+/* .hr-box:hover,
 .hr-box:focus,
 .hr-box:active {
   outline: 5px solid rgb(66, 206, 161);
   outline-offset: 7px;
   transition: all 0.25s ease-out;
-}
-
-.hr-box.active {
-  outline: 5px solid rgb(66, 206, 161);
-  outline-offset: 7px;
-}
+} */
 
 .hr-box img {
   width: 100%;
   max-width: 85px;
   height: 85px;
+  margin: 0 auto;
 }
 
 .service-title h1 {
