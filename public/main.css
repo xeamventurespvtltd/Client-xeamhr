@@ -308,13 +308,19 @@ a:hover {
   outline-offset: 1px !important;
 } */
 
-/* .hr-box:hover,
+.hr-box:hover,
 .hr-box:focus,
 .hr-box:active {
   outline: 5px solid rgb(66, 206, 161);
   outline-offset: 7px;
   transition: all 0.25s ease-out;
-} */
+}
+
+.slick-slide .hr-box.active {
+  outline: 5px solid rgb(66, 206, 161);
+  outline-offset: 7px;
+
+}
 
 .hr-box img {
   width: 100%;

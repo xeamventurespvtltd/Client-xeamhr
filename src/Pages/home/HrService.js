@@ -163,8 +163,9 @@ class HrService extends React.Component {
     }
   }
   imageClicked = (data) => {
-    console.log(data)
+    console.log(data.id)
     this.setState({
+      Id: data.id,
       Data: data,
     })
   }
