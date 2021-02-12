@@ -1,0 +1,203 @@
+/* ========= schedule book section =========== */
+.schedule-book {
+  position: relative;
+  padding: 3rem 0;
+}
+
+.schedule-book h1 {
+  color: rgb(25, 90, 158);
+  font-weight: 700;
+}
+
+.automate {
+  margin: 1.8rem 0 2.2rem 0;
+}
+
+.automate span {
+  border: 1px solid rgb(25, 90, 158);
+  border-radius: 40px;
+  padding: .8rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: #454545;
+}
+
+.automate span>b {
+  color: rgb(66, 206, 161);
+}
+
+.schedule-list {
+  text-align: left;
+}
+
+.schedule-list h5 {
+  font-weight: 600;
+  color: #353535;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.schedule-list ul {
+  padding-left: 0;
+}
+
+.schedule-list ul>li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+.schedule-list ul li>h6 {
+  font-size: 0.98rem;
+  color: #555;
+  margin-left: 0.8rem;
+  padding: 0.2rem 0;
+  line-height: 1.5;
+}
+
+.schedule-list ul li>i {
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(360deg, rgb(25, 90, 158), rgb(66, 206, 161));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+/* =========date-time-section========== */
+.date-time-section {
+  background-color: #f8f8f8;
+}
+
+/* 
+.calender-box {} */
+
+.cal-body {
+  position: relative;
+  display: flex;
+  padding: 5rem 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 350px;
+}
+
+.calender-box {
+  background: -webkit-linear-gradient(180deg, rgb(66, 206, 161), rgb(25, 90, 158));
+  padding: 0.21rem;
+  border-radius: 5px;
+  position: relative;
+}
+
+.cal-top {
+  position: relative;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+}
+
+.cal-logo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(180deg, rgb(66, 206, 161), rgb(25, 90, 158));
+  color: #fff;
+  font-size: 1.2rem;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+}
+
+.cal-body .cal-top>h6 {
+  font-size: 1rem;
+  padding: 4rem 0 0.5rem 0;
+  color: rgb(25, 90, 158);
+  font-weight: 600;
+}
+
+.cal-body .react-calendar {
+  width: 100% !important;
+  padding: 1rem;
+  border-radius: 0 0 5px 5px;
+  border-top: 1px solid #a0a096 !important;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.react-calendar .react-calendar__navigation__label {
+  color: rgb(66, 206, 161) !important;
+  font-size: 1.2rem;
+}
+
+.react-calendar__navigation__arrow {
+  color: rgba(25, 90, 158) !important;
+}
+
+.react-calendar__tile--active {
+  color: rgb(66, 206, 161) !important;
+  background: none !important;
+  border: 2px solid rgba(25, 90, 158) !important;
+}
+
+.react-calendar__tile--now {
+  background-color: rgba(66, 206, 161, 0.4);
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: rgba(66, 206, 161, 0.4) !important;
+  color: rgba(35, 90, 158) !important;
+}
+
+/* =========time-duration-section========== */
+.time-duration-section {
+  background: rgba(25, 90, 158);
+  height: 100%;
+  text-align: left;
+  padding: 2rem;
+  color: #eee;
+}
+
+.query-schedule {
+  background: #fff;
+  padding: 2rem;
+  color: rgb(25, 90, 158);
+}
+
+.time-duration-section input::placeholder {
+  color: #000 !important;
+}
+
+.time-duration-section select {
+  color: #444;
+}
+
+@media screen and (max-width: 768px) {
+  .schedule-book h1 {
+    font-size: 1.8rem;
+  }
+
+  .automate span {
+    font-size: 1.2rem;
+    padding: .8rem 1.2rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .automate span {
+    font-size: 1.1rem;
+    padding: .8rem 1rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .automate span {
+    border: none;
+  }
+}
