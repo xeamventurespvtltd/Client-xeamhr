@@ -1,0 +1,76 @@
+:root {
+  --white: #fff;
+  --orange: #f36c00;
+}
+
+button {
+  cursor: pointer;
+}
+
+.vertical-carousel {
+  margin: 2rem 0;
+  padding: 2rem 0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.vertical-carousel .slick-slider .slick-arrow {
+  position: absolute;
+  transition: all 0.25s linear;
+  font-size: 1.5rem;
+  color: rgb(66, 206, 161, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.2));
+}
+
+.vertical-carousel .slick-slider .slick-arrow>i {
+  transition: all 0.25s linear;
+}
+
+.vertical-carousel .slick-slider .slick-arrow>i:focus,
+.vertical-carousel .slick-slider .slick-arrow>i:hover {
+  transition: all 0.25s linear;
+  color: rgb(66, 206, 161) !important;
+  font-size: 2rem;
+}
+
+.vertical-carousel .slick-slider .slick-arrow.next {
+  transform: translate(-50%, 250%);
+}
+
+.vertical-carousel .slick-slider .slick-arrow.prev {
+  transform: translate(-50%, -350%);
+}
+
+.time-box {
+  color: #bbb;
+  font-weight: 600;
+}
+
+.time-box span {
+  font-size: 1.4rem;
+  display: inline-block;
+  margin: 5px;
+}
+
+.time-box.active span {
+  transition: all 0.25s linear;
+  color: #fff;
+  padding: 0 1rem;
+  font-size: 1.8rem !important;
+  outline: 2px solid rgb(66, 206, 161) !important;
+}
+
+.time-submit {
+  text-align: center;
+}
+
+.time-submit a {
+  font-size: 1.5rem;
+  background: #fff;
+  color: rgb(66, 206, 161);
+  padding: 0.3rem 2rem;
+  letter-spacing: 2px;
+}

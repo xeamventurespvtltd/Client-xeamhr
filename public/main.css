@@ -82,28 +82,28 @@ a:hover {
   background: linear-gradient(to right, rgb(25, 90, 158, 0.7) 40%, rgb(66, 206, 161, 0.45) 100%)
 }
 
-.navbar {
+.headerHome .navbar {
   background: transparent !important;
   padding-top: 1rem;
 }
 
-.navbar-brand {
+.headerHome .navbar-brand {
   font-size: 2.5rem;
   color: #fff !important;
 }
 
-.nav-item a {
+.headerHome .nav-item a {
   color: #fff !important;
   font-size: 1rem !important;
   margin: 0 .4rem;
 }
 
-.menu-body.show {
+.headerHome.menu-body.show {
   z-index: 10;
 }
 
 
-.nav-link.active {
+.headerHome .nav-link.active {
   color: rgba(26, 89, 156) !important;
 }
 
@@ -111,23 +111,78 @@ a:hover {
   position: relative;
 }
 
-.myNavbar button {
+.headerHome .myNavbar button {
   border: 1px solid #fff !important;
   color: #fff !important;
 }
 
-.demo-button {
+.headerHome .demo-button {
   display: flex;
   margin-left: 20px;
   width: 300px
 }
 
-.menu_active {
+.headerHome .menu_active {
   font-weight: 500;
   border-bottom: 1px solid rgba(26, 89, 156);
 }
 
-.demo-button a {
+.headerHome .demo-button a {
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: rgb(62, 198, 198);
+  padding: 0.4rem 1rem;
+  font-weight: 800;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.headerBook {
+  background: linear-gradient(to right, rgb(25, 90, 158, 0.9) 5%, rgb(66, 206, 161, 0.9) 100%);
+  /* padding-top: 1rem; */
+}
+
+.headerBook .navbar-brand {
+  font-size: 2.5rem;
+  color: #fff !important;
+}
+
+.headerBook .nav-item a {
+  color: #fff !important;
+  font-size: 1rem !important;
+  margin: 0 .4rem;
+}
+
+.headerBook .menu-body.show {
+  z-index: 10;
+}
+
+
+.headerBook .nav-link.active {
+  color: rgba(26, 89, 156) !important;
+}
+
+.myNavbar {
+  position: relative;
+}
+
+.headerBook .myNavbar button {
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+.headerBook .demo-button {
+  display: flex;
+  margin-left: 20px;
+  width: 300px
+}
+
+.headerBook .menu_active {
+  font-weight: 500;
+  border-bottom: 1px solid rgba(26, 89, 156);
+}
+
+.headerBook .demo-button a {
   font-size: 1.2rem;
   background-color: #fff;
   color: rgb(62, 198, 198);
@@ -247,20 +302,6 @@ a:hover {
   background: #f8f8f8;
 }
 
-.service-section .owl-nav button>span {
-  font-size: 2.5rem;
-  width: 45px;
-  height: 45px;
-  padding: 0px 4px 5px 5px;
-  border: 2px solid rgb(25, 90, 158);
-  border-radius: 50%;
-  color: rgb(66, 206, 161);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
 .hr-box {
   background: #fff;
   padding: 0.8rem 0;
@@ -274,39 +315,29 @@ a:hover {
   transition: outline 0.25s ease-in-out;
 }
 
-.slick-list {
+.service-section .slick-list {
   padding: 2rem 0 !important;
 }
 
-.slick-list {
+.service-section .slick-list {
   margin: 0 -5px 0 12px !important;
   padding: 1rem 0
 }
 
 
-.slick-slide>div {
+.service-section .slick-slide>div {
   padding: 1rem !important;
 }
 
-.slick-next:before {
+.service-section .slick-next:before {
   color: rgb(25, 90, 158) !important;
   font-size: 2rem !important;
 }
 
-.slick-prev:before {
+.service-section .slick-prev:before {
   color: rgb(25, 90, 158) !important;
   font-size: 2rem !important;
 }
-
-.slick-list .slick-slide>div:focus {
-  outline: 2px solid rgb(66, 206, 161) !important;
-  outline-offset: 1px !important;
-}
-
-/* .hr-focus:focus .slick-slide {
-  outline: 3px solid rgb(66, 206, 161) !important;
-  outline-offset: 1px !important;
-} */
 
 .hr-box:hover,
 .hr-box:focus,
@@ -316,9 +347,9 @@ a:hover {
   transition: all 0.25s ease-out;
 }
 
-.slick-slide .hr-box.active {
-  outline: 5px solid rgb(66, 206, 161);
-  outline-offset: 7px;
+.service-section .slick-slide .hr-box.activa {
+  outline: 5px solid rgb(66, 206, 161) !important;
+  outline-offset: 7px !important;
 
 }
 
@@ -474,38 +505,31 @@ a:hover {
   position: relative;
 }
 
-.review-section .owl-nav {
-  display: none;
-}
-
-.review-section .owl-dots {
-  margin-top: 1.5rem;
-}
-
-.review-section .owl-theme .owl-dots .owl-dot span {
-  width: 28px;
-  height: 28px;
-  border: 3px solid rgb(66, 206, 161);
-  background-color: #fff;
-}
-
-.review-section .owl-theme .owl-dots .owl-dot:hover span {
-  background: #fff;
-}
-
-.review-section .owl-theme .owl-dots .owl-dot:focus {
-  outline: none;
-}
-
-.review-section .owl-theme .owl-dots .owl-dot.active span {
-  background-color: rgb(66, 206, 161);
-}
-
 .review-section h1 {
   color: rgb(25, 90, 158);
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 2.5rem;
+}
+
+.review-section .slick-dots {
+  padding-top: 1rem;
+}
+
+.review-section .slick-dots li button {
+  border: 2px solid rgba(66, 206, 161);
+  border-radius: 50%;
+}
+
+.review-section .slick-dots li button::before {
+  border-radius: 50%;
+  content: "" !important;
+  border: 2px solid rgb(66, 206, 161);
+  background: rgb(66, 206, 161) !important;
+}
+
+.review-section .slick-dots li.slick-active button:before {
+  color: rgb(66, 206, 161) !important;
 }
 
 .review-box {
@@ -515,6 +539,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
+  margin: 0 2rem;
 }
 
 .review-info {
@@ -671,16 +696,30 @@ footer.footer1 {
 
 /* Media Queries starts here */
 @media screen and (max-width: 990px) {
-  .menu-body {
-    background: linear-gradient(90deg, rgb(25, 90, 158, 0.9) 40%, rgb(66, 206, 161) 100%)
+  .headerHome .menu-body {
+    background: linear-gradient(90deg, rgb(25, 90, 158) 40%, rgb(66, 206, 161) 100%);
+    z-index: 100
   }
 
-  .demo-button {
+  .headerBook .menu-body {
+    background: none;
+    z-index: 100
+  }
+
+  .headerHome .demo-button {
     position: absolute;
-    top: 29px;
-    right: 90px;
+    top: 34px;
+    right: 80px;
     width: 200px;
   }
+
+  .headerBook .demo-button {
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    width: 200px;
+  }
+
 
   .banner-body h1 {
     font-size: 3rem;
@@ -740,9 +779,6 @@ footer.footer1 {
 }
 
 @media screen and (max-width: 691px) {
-  .demo-button {
-    top: 30px;
-  }
 
   .banner-body h1 {
     font-size: 2.8rem;
@@ -820,11 +856,6 @@ footer.footer1 {
     font-size: 2.5rem;
   }
 
-  .demo-button {
-    top: 31px;
-    width: 150px;
-  }
-
   .demo-button a {
     font-size: 1rem;
   }
@@ -850,39 +881,31 @@ footer.footer1 {
     padding: 0.4rem 1.8rem;
   }
 
-  .service-section .owl-nav>.owl-next {
-    right: -56px;
-  }
-
-  .service-section .owl-nav>.owl-prev {
-    left: -40px;
-  }
-
-  .service-section .owl-nav button>span {
-    width: 40px;
-    height: 40px;
-  }
-
-  .service-section .owl-nav button>i {
-    width: 35px;
-    height: 35px;
-  }
-
   .review-box {
     padding: 2rem 2rem 1rem 2rem;
   }
 }
 
 @media screen and (max-width: 475px) {
-  .demo-button {
-    top: 30px;
-    width: 145px;
+  .headerHome .demo-button {
+    right: 50px;
   }
 
-  .demo-button a {
-    font-size: 0.9rem;
+  .headerBook .demo-button {
+    right: 50px;
+  }
+
+
+  .headerHome .demo-button a {
+    font-size: 1rem;
     font-weight: 700;
-    padding: 0.2rem 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .headerBook .demo-button a {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
   }
 
   .navbar-brand {

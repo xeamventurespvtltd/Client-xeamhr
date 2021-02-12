@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 const AboutUs = ({ title, content1, content2 }) => {
   return (
     <>
-      <section className="about-section">
+      <section id="aboutus" className="about-section">
         <div className="container">
           <div className="row">
             <div className="col-md-6 mb-2">
