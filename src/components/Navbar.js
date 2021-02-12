@@ -1,9 +1,9 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-const Navbar = () => {
+const Navbar = ({ header }) => {
   return (
-    <>
+    <div className={`${header}`}>
       <nav className="container navbar navbar-expand-lg navbar-light myNavbar">
         <NavLink
           exact className="navbar-brand" to="/">LOGO</NavLink>
@@ -30,10 +30,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="demo-button">
-          <a href="/">BOOK A DEMO</a>
+          <NavLink to="/book-a-demo">BOOK A DEMO</NavLink>
         </div>
       </nav>
-    </>
+    </div>
   )
 }
 export default Navbar

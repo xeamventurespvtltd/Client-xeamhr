@@ -50,7 +50,7 @@ const services = [
   {
     id: 2,
     icon: icon2,
-    name: "Documents",
+    name: "Calender",
     image: image2,
     heading: "Analyze your abcd",
     content: {
@@ -62,7 +62,7 @@ const services = [
   {
     id: 3,
     icon: icon3,
-    name: "Documents",
+    name: "Payroll",
     image: image3,
     heading: "Analyze your abcd",
     content: {
@@ -74,7 +74,7 @@ const services = [
   {
     id: 4,
     icon: icon4,
-    name: "Documents",
+    name: "Communication",
     image: image4,
     heading: "Analyze your abcd",
     content: {
@@ -86,7 +86,7 @@ const services = [
   {
     id: 5,
     icon: icon5,
-    name: "Documents",
+    name: "Projects",
     image: image5,
     heading: "Analyze your abcd",
     content: {
@@ -98,7 +98,7 @@ const services = [
   {
     id: 6,
     icon: icon6,
-    name: "Documents",
+    name: "Attendance",
     image: image6,
     heading: "Analyze your abcd",
     content: {
@@ -110,7 +110,7 @@ const services = [
   {
     id: 7,
     icon: icon7,
-    name: "Documents",
+    name: "Leave",
     image: image7,
     heading: "Analyze your abcd",
     content: {
@@ -144,26 +144,12 @@ const services = [
     }
   }
 ]
-
-const active = false
 class HrService extends React.Component {
   state = {
     Id: 0,
-    Data: null,
-    responsive: {
-      0: {
-        items: 2
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 5
-      },
-    }
+    Data: null
   }
   imageClicked = (data) => {
-    console.log(data.id)
     this.setState({
       Id: data.id,
       Data: data,
@@ -171,29 +157,25 @@ class HrService extends React.Component {
   }
   render() {
     return (
-      <>
-        <section className="service-section">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-10 mx-auto">
-                <div className="service-title mb-3">
-                  <h1>Complete HRMS Services</h1>
-                  <p>Lorem Ipsum is simply text of the priting</p>
-                </div>
-
-                <ServiceCarousel
-                  services={services}
-                  Id={this.state.Id}
-                  imageClicked={this.imageClicked}
-                  responsive={this.state.responsive}
-                  active={active}
-                />
-                <BelowService Id={this.state.Id} Data={(this.state.Data) ? this.state.Data : services[0]} />
+      <section className="service-section">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-10 mx-auto">
+              <div className="service-title mb-3">
+                <h1>Complete HRMS Services</h1>
+                <p>Lorem Ipsum is simply text of the priting</p>
               </div>
+
+              <ServiceCarousel
+                services={services}
+                imageClicked={this.imageClicked}
+                Id={this.state.Id}
+              />
+              <BelowService Data={(this.state.Data) ? this.state.Data : services[0]} />
             </div>
           </div>
-        </section>
-      </>
+        </div>
+      </section>
     )
   }
 }
