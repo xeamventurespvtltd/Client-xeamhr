@@ -1,0 +1,294 @@
+.contact-text {
+  padding: 2rem 0;
+}
+
+.contact-text h1 {
+  font-size: 2.4rem;
+  color: rgb(25, 90, 158);
+  font-weight: 600;
+}
+
+.contact-section-body {
+  background: #f8f8f8;
+}
+
+/* *******contact from section******** */
+.conForm-body {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1.5rem 0.5rem 5rem;
+  position: relative;
+}
+
+.conForm-input {
+  height: 42px !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+.conForm-input:focus-within {
+  border: 1px solid #86b7fe;
+  transition: all 0.15s linear;
+}
+
+.conForm-input.error {
+  border: 1px solid #ec5858d4;
+}
+
+.conForm-input.success {
+  border: 1px solid #74b49b;
+}
+
+.conForm-input+small {
+  display: none;
+}
+
+.conForm-input.error+small {
+  display: block;
+  color: red;
+  padding: 0 0 0 10px;
+}
+
+.conForm-input i {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  font-size: 1.25rem;
+}
+
+.conForm-input i.fa-circle {
+  color: #bbb;
+}
+
+.conForm-input>i.fa-times-circle,
+.conForm-input>i.fa-check-circle {
+  display: none;
+}
+
+.conForm-input.error>i.fa-times-circle {
+  display: block;
+  color: #ec5858d4;
+}
+
+.conForm-input.success>i.fa-check-circle {
+  display: block;
+  color: #74b49b;
+}
+
+.conForm-box label {
+  color: rgb(29, 104, 158);
+  font-size: 1.02rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 0 5px 5px
+}
+
+.conForm-box input::placeholder,
+.conForm-box textarea::placeholder {
+  color: #bbb;
+}
+
+.conForm-box input,
+.conForm-box textarea {
+  color: #444 !important;
+  box-shadow: none !important;
+  height: 100% !important;
+  border-radius: 8px;
+  border: none;
+}
+
+.conForm-box textarea {
+  border: 1px solid #ced4da;
+}
+
+.conForm-button {
+  text-align: left;
+}
+
+.conForm-button button {
+  margin: 20px 0 10px 0;
+  background: rgb(66, 206, 161);
+  color: #fff;
+  padding: 0.4rem 2.2rem;
+  font-size: 1.45rem;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* transition: transform 0.25s linear; */
+}
+
+.conForm-button small {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.conForm-button button:focus {
+  outline: none;
+}
+
+.conForm-button button:active {
+  transform: scale(1.011);
+}
+
+/* ==========address section========= */
+
+.address-section {
+  color: #fff;
+  text-align: left;
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+.address-body {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem 1.5rem;
+  max-width: 100%;
+  width: 500px;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+
+.address-body:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(160deg, rgba(25, 90, 158, 0.8) 10%, rgba(66, 206, 161, 0.8)) 60%;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.visit-head h2 {
+  font-size: 1.22rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.visit-list ul {
+  padding: 0;
+}
+
+.visit-list ul>li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.visit-text {
+  display: flex;
+  justify-content: center;
+}
+
+.visit-icon {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  max-width: 50px;
+  width: 100%;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.visit-list i {
+  font-size: 1.15rem;
+  background: -webkit-linear-gradient(220deg, rgb(25, 90, 158), rgb(66, 206, 161));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.visit-list h4 {
+  font-size: 1.04rem;
+  padding-bottom: 0.25rem;
+}
+
+.add-divider {
+  max-width: 100%;
+  height: 1px;
+  border-top: 1px dashed #fff;
+  background: none;
+  margin-bottom: 1rem;
+}
+
+.support-content {
+  color: #fff;
+}
+
+.support-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.support-content p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ======== map styles ======== */
+.map-section {
+  padding: 3rem 0;
+}
+
+.map-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.map-container {
+  background: linear-gradient(45deg, rgb(25, 90, 158), rgb(66, 206, 161));
+  padding: 4px;
+  margin-bottom: 1rem;
+}
+
+.map-container>div {
+  margin: 0;
+
+}
+
+.map-container .mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  padding: 0.8rem;
+  background: #fff;
+}
+
+.map-container .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 420px;
+}
+
+@media screen and (max-width:768px) {
+  .contact-text h1 {
+    font-size: 2rem;
+  }
+
+  .address-body {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  .conForm-body {
+    padding-left: 2rem;
+  }
+}

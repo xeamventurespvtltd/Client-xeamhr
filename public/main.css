@@ -66,8 +66,6 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  position: relative;
-  clip-path: polygon(100% 0%, 100% 90%, 0% 100%, 0% 0%);
 }
 
 
@@ -82,57 +80,153 @@ a:hover {
   background: linear-gradient(to right, rgb(25, 90, 158, 0.7) 40%, rgb(66, 206, 161, 0.45) 100%)
 }
 
-.navbar {
+.headerHome .navbar {
   background: transparent !important;
-  padding-top: 1rem;
+  padding: 0 12px;
 }
 
-.navbar-brand {
+.headerHome .navbar-brand {
   font-size: 2.5rem;
   color: #fff !important;
 }
 
-.nav-item a {
-  color: #fff !important;
-  font-size: 1rem !important;
-  margin: 0 .4rem;
+.headerHome.navbar-sticky {
+  background: linear-gradient(to right, rgb(25, 90, 158) 5%, rgb(66, 206, 161) 100%);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  z-index: 1000;
+  animation: moveDown 0.5s ease-in-out;
 }
 
-.menu-body.show {
+@keyframes moveDown {
+  from {
+    transform: translateY(-5rem);
+  }
+
+  to {
+    transform: translateY(0rem);
+  }
+}
+
+.headerHome .nav-item a {
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  margin: 0 .4rem;
+  letter-spacing: 1px;
+}
+
+.headerHome.menu-body.show {
   z-index: 10;
 }
 
-
-.nav-link.active {
+/* 
+.headerHome .nav-link.active {
   color: rgba(26, 89, 156) !important;
-}
+} */
 
 .myNavbar {
   position: relative;
 }
 
-.myNavbar button {
+.headerHome .myNavbar button {
   border: 1px solid #fff !important;
   color: #fff !important;
 }
 
-.demo-button {
+.headerHome .demo-button {
   display: flex;
   margin-left: 20px;
   width: 300px
 }
 
-.menu_active {
+.headerHome .menu_active {
   font-weight: 500;
   border-bottom: 1px solid rgba(26, 89, 156);
 }
 
-.demo-button a {
+.headerHome .demo-button a {
   font-size: 1.2rem;
   background-color: #fff;
   color: rgb(62, 198, 198);
-  padding: 0.4rem 1rem;
-  font-weight: 800;
+  padding: 0.25rem 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.headerBook {
+  background: linear-gradient(to right, rgb(25, 90, 158, 0.9) 5%, rgb(66, 206, 161, 0.9) 100%);
+}
+
+.headerBook .navbar {
+  background: transparent !important;
+  padding: 0 12px;
+}
+
+
+.headerBook.navbar-sticky {
+  background: linear-gradient(to right, rgb(25, 90, 158) 5%, rgb(66, 206, 161) 100%);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  z-index: 1000;
+  animation: moveDown 0.5s ease-in-out;
+}
+
+
+.headerBook .navbar-brand {
+  font-size: 2.5rem;
+  color: #fff !important;
+}
+
+.headerBook .nav-item a {
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  margin: 0 .4rem;
+}
+
+.headerBook .menu-body.show {
+  z-index: 10;
+}
+
+/* 
+.headerBook .nav-link.active {
+  color: rgba(26, 89, 156) !important;
+} */
+
+.myNavbar {
+  position: relative;
+}
+
+.headerBook .myNavbar button {
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+.headerBook .demo-button {
+  display: flex;
+  margin-left: 20px;
+  width: 300px
+}
+
+.headerBook .menu_active {
+  font-weight: 500;
+  border-bottom: 1px solid rgba(26, 89, 156);
+}
+
+.headerBook .demo-button a {
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: rgb(62, 198, 198);
+  padding: 0.25rem 1rem;
+  font-weight: 700;
   border-radius: 10px;
   margin: 0 auto;
 }
@@ -226,7 +320,7 @@ a:hover {
 }
 
 .about-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
 }
 
@@ -247,20 +341,6 @@ a:hover {
   background: #f8f8f8;
 }
 
-.service-section .owl-nav button>span {
-  font-size: 2.5rem;
-  width: 45px;
-  height: 45px;
-  padding: 0px 4px 5px 5px;
-  border: 2px solid rgb(25, 90, 158);
-  border-radius: 50%;
-  color: rgb(66, 206, 161);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
 .hr-box {
   background: #fff;
   padding: 0.8rem 0;
@@ -274,39 +354,29 @@ a:hover {
   transition: outline 0.25s ease-in-out;
 }
 
-.slick-list {
+.service-section .slick-list {
   padding: 2rem 0 !important;
 }
 
-.slick-list {
+.service-section .slick-list {
   margin: 0 -5px 0 12px !important;
   padding: 1rem 0
 }
 
 
-.slick-slide>div {
+.service-section .slick-slide>div {
   padding: 1rem !important;
 }
 
-.slick-next:before {
+.service-section .slick-next:before {
   color: rgb(25, 90, 158) !important;
   font-size: 2rem !important;
 }
 
-.slick-prev:before {
+.service-section .slick-prev:before {
   color: rgb(25, 90, 158) !important;
   font-size: 2rem !important;
 }
-
-.slick-list .slick-slide>div:focus {
-  outline: 2px solid rgb(66, 206, 161) !important;
-  outline-offset: 1px !important;
-}
-
-/* .hr-focus:focus .slick-slide {
-  outline: 3px solid rgb(66, 206, 161) !important;
-  outline-offset: 1px !important;
-} */
 
 .hr-box:hover,
 .hr-box:focus,
@@ -316,9 +386,9 @@ a:hover {
   transition: all 0.25s ease-out;
 }
 
-.slick-slide .hr-box.active {
-  outline: 5px solid rgb(66, 206, 161);
-  outline-offset: 7px;
+.service-section .slick-slide .hr-box.activa {
+  outline: 5px solid rgb(66, 206, 161) !important;
+  outline-offset: 7px !important;
 
 }
 
@@ -368,7 +438,7 @@ a:hover {
 .atten-box h2 {
   color: rgb(78, 95, 89);
   margin-left: 1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: left;
   font-weight: 600;
 }
@@ -376,8 +446,8 @@ a:hover {
 .service-list li {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
   margin-bottom: 12px;
+  text-align: left;
 }
 
 .service-list li>i {
@@ -419,8 +489,8 @@ a:hover {
 
 .feature-title h1 {
   color: #fff;
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.9rem;
+  margin-bottom: 1rem;
 }
 
 .feature-title p {
@@ -438,97 +508,126 @@ a:hover {
   border-radius: 4px;
   padding: 1rem 2rem;
   height: 100%;
-  transition: all 0.25s linear;
+  transition: transform 0.2s linear;
+}
+
+.feature-box img {
+  width: 100%;
+  max-width: 90px;
+  height: 90px;
+  margin-bottom: 1rem;
 }
 
 .feature-box:hover {
   transform: scale(1.06);
-  transition: all 0.25s linear;
-}
-
-.feature-box i {
-  font-size: 5rem;
-  background: -webkit-linear-gradient(180deg, rgb(25, 90, 158), rgb(66, 206, 161));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
+  transition: transform 0.2s linear;
 }
 
 .feature-box h4 {
   color: rgb(66, 206, 161);
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
 
 .feature-box p {
   color: #555555;
-  font-size: 1.15rem;
-  line-height: 1.3;
+  font-size: 1.06rem;
+  line-height: 1.2;
 }
 
 /* ===========customer review section=========== */
 
 .review-section {
-  padding: 3.5rem 0;
   position: relative;
 }
 
-.review-section .owl-nav {
-  display: none;
+.our-partner {
+  background: rgba(66, 206, 161);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2.4rem 1.4rem;
 }
 
-.review-section .owl-dots {
-  margin-top: 1.5rem;
+.client-image {
+  margin: 1.2rem 0;
 }
 
-.review-section .owl-theme .owl-dots .owl-dot span {
-  width: 28px;
-  height: 28px;
-  border: 3px solid rgb(66, 206, 161);
-  background-color: #fff;
+.client-image img {
+  width: 100%;
+  max-width: 160px;
+  height: 100px;
+  border-radius: 10px;
 }
 
-.review-section .owl-theme .owl-dots .owl-dot:hover span {
-  background: #fff;
+.our-partner h2 {
+  color: #fff;
+  font-size: 2.5rem;
 }
 
-.review-section .owl-theme .owl-dots .owl-dot:focus {
-  outline: none;
+.client-review {
+  background: url("/assets/Images/imgpsh_fullsize_anim (7).jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 0;
+  text-align: left;
 }
 
-.review-section .owl-theme .owl-dots .owl-dot.active span {
-  background-color: rgb(66, 206, 161);
+.client-review h1 span {
+  font-size: 2.2rem;
 }
 
-.review-section h1 {
-  color: rgb(25, 90, 158);
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 2.5rem;
+.client-review h1 span {
+  background: rgb(25, 90, 158);
+  color: #fff;
+  padding: 0.4rem 2rem;
+}
+
+.review-section .slick-dots {
+  padding-top: 1rem;
+}
+
+.review-section .slick-dots li button {
+  border: 2px solid rgba(66, 206, 161);
+  border-radius: 50%;
+}
+
+.review-section .slick-dots li button::before {
+  border-radius: 50%;
+  content: "" !important;
+  border: 2px solid rgb(66, 206, 161);
+  background: rgb(66, 206, 161) !important;
+}
+
+.review-section .slick-dots li.slick-active button:before {
+  background-color: rgb(66, 206, 161) !important;
+  opacity: 1;
 }
 
 .review-box {
-  padding: 2rem 3rem 1rem 3rem;
-  background-color: rgb(66, 206, 161);
-  color: #fff;
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
+  margin: 0 2rem;
 }
 
 .review-info {
   display: flex;
   align-items: center;
+  padding: 0.8rem 0;
 }
 
 .info-image i {
   margin-right: 1rem;
   color: rgb(25, 90, 158);
   background-color: #fff;
-  padding: 2.5rem;
+  padding: 1.15rem;
   border-radius: 50%;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
+  border: 1px solid #333;
 }
 
 .info-name {
@@ -540,45 +639,64 @@ a:hover {
 }
 
 .info-name h4 {
-  font-size: 1.6rem;
+  font-size: 1.35rem;
+  color: rgb(25, 90, 158);
 }
 
 .info-name p {
-  font-size: 1.1rem;
+  font-size: 1.0.5rem;
+  margin: 0;
 }
 
 .review-content {
+  background: #fff;
   text-align: left;
-  padding: 2.4rem 2rem 1.5rem 2rem;
+  padding: 3.5rem 2rem 1.5rem 2rem;
   font-size: 1.15rem;
   position: relative;
+  border: 1px solid rgb(25, 90, 158);
+  border-radius: 10px;
+}
+
+.review-content blockquote {
+  color: #444;
+  line-height: 1.2;
+  font-size: 1.02rem;
+  letter-spacing: 1px;
+}
+
+.review-content i {
+  color: rgb(25, 90, 158);
+  font-size: 1.5rem;
 }
 
 .review-content i.fa-quote-left {
   position: absolute;
-  top: 12px;
-  left: 4px;
-  font-size: 1.5rem;
+  top: 15px;
+  left: 18px;
 }
 
 .review-content i.fa-quote-right {
   position: absolute;
-  bottom: 12px;
-  right: 8px;
-  font-size: 1.5rem;
+  bottom: 20%;
+  right: 18px;
 }
 
 .star-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  position: relative;
+  left: -33px;
+  bottom: -12px;
+  margin-top: 2.5rem;
+
 }
 
 .star-list ul>li {
-  display: inline-block;
-  font-size: 2rem;
+  display: inline;
+  font-size: 1.4rem;
   color: #f9f871;
+  padding: 3px;
+  background: rgb(66, 206, 161);
 }
 
 /* ==========footer section=========== */
@@ -620,7 +738,8 @@ footer.footer1 {
 
 .footer-body p {
   font-size: 1.05rem;
-  line-height: 0.5;
+  line-height: 1.3;
+  margin: 0;
 }
 
 .footer-contact {
@@ -671,14 +790,33 @@ footer.footer1 {
 
 /* Media Queries starts here */
 @media screen and (max-width: 990px) {
-  .menu-body {
-    background: linear-gradient(90deg, rgb(25, 90, 158, 0.9) 40%, rgb(66, 206, 161) 100%)
+  .headerHome .menu-body {
+    background: #fff;
+    z-index: 100
   }
 
-  .demo-button {
+  .headerHome .nav-item a {
+    background: linear-gradient(180deg, rgb(25, 90, 158), rgb(66, 206, 161));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .headerBook .menu-body {
+    background: none;
+    z-index: 100
+  }
+
+  .headerHome .demo-button {
     position: absolute;
-    top: 29px;
-    right: 90px;
+    top: 19px;
+    right: 80px;
+    width: 200px;
+  }
+
+  .headerBook .demo-button {
+    position: absolute;
+    top: 19px;
+    right: 80px;
     width: 200px;
   }
 
@@ -731,18 +869,34 @@ footer.footer1 {
   }
 
   .feature-title h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 
-  .review-section h1 {
-    font-size: 2.8rem;
+  .info-name h4 {
+    font-size: 1.3rem;
+  }
+
+  .info-name p {
+    font-size: 0.9rem;
+  }
+
+  .our-partner h2 {
+    font-size: 2rem;
+  }
+
+  .client-image img {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .client-image img {
+    max-width: 170px;
+    height: 100px;
   }
 }
 
 @media screen and (max-width: 691px) {
-  .demo-button {
-    top: 30px;
-  }
 
   .banner-body h1 {
     font-size: 2.8rem;
@@ -810,19 +964,11 @@ footer.footer1 {
     font-size: 2.5rem
   }
 
-  .info-image i {
-    padding: 2.3rem;
-  }
 }
 
 @media screen and (max-width: 575px) {
   .banner-body h1 {
     font-size: 2.5rem;
-  }
-
-  .demo-button {
-    top: 31px;
-    width: 150px;
   }
 
   .demo-button a {
@@ -850,43 +996,77 @@ footer.footer1 {
     padding: 0.4rem 1.8rem;
   }
 
-  .service-section .owl-nav>.owl-next {
-    right: -56px;
-  }
-
-  .service-section .owl-nav>.owl-prev {
-    left: -40px;
-  }
-
-  .service-section .owl-nav button>span {
-    width: 40px;
-    height: 40px;
-  }
-
-  .service-section .owl-nav button>i {
-    width: 35px;
-    height: 35px;
-  }
-
   .review-box {
     padding: 2rem 2rem 1rem 2rem;
   }
+
+  .client-image img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .client-review h1 span {
+    font-size: 2.2rem;
+  }
+
+  .headerHome .demo-button {
+    position: absolute;
+    top: 18px;
+  }
+
+  .headerBook .demo-button {
+    position: absolute;
+    top: 18px;
+  }
+
+  .client-image img {
+    max-width: 150px;
+  }
+
 }
 
 @media screen and (max-width: 475px) {
-  .demo-button {
-    top: 30px;
-    width: 145px;
+  .headerHome .demo-button {
+    right: 50px;
   }
 
-  .demo-button a {
-    font-size: 0.9rem;
+  .headerBook .demo-button {
+    right: 50px;
+  }
+
+  .headerHome .demo-button a {
+    font-size: 1rem;
     font-weight: 700;
-    padding: 0.2rem 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .headerBook .demo-button a {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
   }
 
   .navbar-brand {
     font-size: 1.9rem;
+  }
 
+  .client-review h1 span {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .client-review h1 span {
+    font-size: 1.5rem;
+  }
+
+  .headerHome .demo-button {
+    position: absolute;
+    right: 40px;
+  }
+
+  .headerBook .demo-button {
+    position: absolute;
+    right: 40px;
   }
 }

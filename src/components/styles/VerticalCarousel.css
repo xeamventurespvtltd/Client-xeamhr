@@ -1,0 +1,96 @@
+button {
+  cursor: pointer;
+}
+
+.vertical-carousel {
+  padding: 1rem 0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.vertical-carousel .slick-slider .slick-arrow {
+  position: absolute;
+  transition: all 0.25s linear;
+  font-size: 1.8rem;
+  color: rgb(66, 206, 161, 0.8);
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.2));
+}
+
+.vertical-carousel .slick-slide {
+  padding: 20px 0;
+}
+
+.vertical-carousel .slick-slide .time-box>span {
+  outline: 2px solid rgb(66, 206, 161);
+  outline-offset: 10px;
+  padding: 0 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.vertical-carousel .slick-slider .slick-arrow>i {
+  transition: all 0.25s linear;
+}
+
+.vertical-carousel .slick-slider .slick-arrow>i:focus,
+.vertical-carousel .slick-slider .slick-arrow>i:hover {
+  transition: all 0.25s linear;
+  color: rgb(66, 206, 161) !important;
+  transform: scale(1.25);
+  /* font-size: 2rem; */
+}
+
+.vertical-carousel .slick-slider .slick-arrow.next {
+  z-index: 1;
+  transform: translate(500%, -58%);
+}
+
+.vertical-carousel .slick-slider .slick-arrow.prev {
+  z-index: 1;
+  transform: translate(-600%, -55%);
+}
+
+.time-box {
+  color: #bbb;
+  font-weight: 600;
+}
+
+.time-box span {
+  font-size: 1.4rem;
+  display: inline-block;
+  margin: 5px;
+}
+
+.time-box.active span {
+  transition: all 0.25s linear;
+  color: #fff;
+  padding: 0 1rem;
+  font-size: 1.8rem !important;
+  outline: 2px solid rgb(66, 206, 161) !important;
+}
+
+.time-submit {
+  text-align: center;
+}
+
+.time-submit button {
+  font-size: 1.5rem;
+  background: #fff;
+  color: rgb(66, 206, 161);
+  padding: 0.3rem 2rem;
+  letter-spacing: 2px;
+  border: 2px solid rgb(25, 90, 158);
+  border-radius: 6px;
+}
+
+.time-submit button:active {
+  transform: scale(1.011);
+}
+
+.time-submit button:focus {
+  outline: none !important;
+}

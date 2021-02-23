@@ -1,39 +1,74 @@
 import React from "react"
-import OwlCarousel from "react-owl-carousel"
-import 'owl.carousel/dist/assets/owl.carousel.min.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import ReviewCard from "../../components/ReviewCard"
-import { carouselReview } from "../Data"
+import { carouselReview } from "../Data";
+import { clientImage } from "../Data"
 
-class Review extends React.Component {
-  state = {
-    responsive: {
-      0: {
-        items: 1
+const Review = () => {
+  let settings = {
+    dots: true,
+    arrows: false,
+    autoplaySpeed: 4500,
+    autoplay: true,
+    speed: 1500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
       },
-      600: {
-        items: 1
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
       },
-      1000: {
-        items: 2
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
       }
-    },
+    ]
   }
-
-  render() {
-    return (
-      <section className="review-section" >
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-10 mx-auto">
-              <h1>Customer Reviews</h1>
-              <OwlCarousel className="owl-theme"
-                margin={20}
-                items="2"
-                nav
-                autoplay
-                dots
-                responsive={this.state.responsive}
+  return (
+    <section id="review" className="review-section" >
+      <div className="container-fluid p-0">
+        <div className="row g-0">
+          <div className="col-md-5 mx-auto">
+            <div className="our-partner">
+              <h2 className="mb-4">Our Clients</h2>
+              <div className="row g-0">
+                {
+                  clientImage.map((img, ind) => {
+                    console.log("review logos is rendered")
+                    return (
+                      <div key={ind} className="col-md-6 col-sm-6 col-6">
+                        <div className="client-image">
+                          <img src={img} alt="client-images" />
+                        </div>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </div>
+          </div>
+          <div className="col-md-7">
+            <div className="client-review">
+              <h1 className="mb-5"><span>Client Testimonials</span></h1>
+              <Slider
+                {...settings}
               >
                 {
                   carouselReview.map((data, ind) => {
@@ -48,13 +83,14 @@ class Review extends React.Component {
                     )
                   })
                 }
-              </OwlCarousel>
+              </Slider>
             </div>
           </div>
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )
+
 
 }
 

@@ -1,38 +1,44 @@
-// import img1 from "../assests/images/icons8-client-management-96.png"
-// import img2 from "../assests/images/icons8-file-100.png"
-// import img3 from "../assests/images/icons8-google-calendar-100.png"
-// import img4 from "../assests/images/icons8-money-bag-100.png"
-// import img5 from "../assests/images/icons8-omnichannel-100.png"
-// import img6 from "../assests/images/icons8-repository-100.png"
-// import img7 from "../assests/images/icons8-resume-100.png"
-// import img8 from "../assests/images/icons8-schedule-100.png"
-// import img9 from "../assests/images/icons8-task-100.png"
-// import img10 from "../assests/images/icons8-work-100.png"
+import cliImage1 from "../assests/image/imgpsh_fullsize_anim (4).jpg";
+import cliImage2 from "../assests/image/imgpsh_fullsize_anim (3).jpg";
+import cliImage3 from "../assests/image/imgllsize_anim.jpg";
+import cliImage4 from "../assests/image/imgpsh_fullsizn5).jpg";
+import icon1 from "../assests/icon/Standardization.png";
+import icon2 from "../assests/icon/User-Friendly.png";
+import icon3 from "../assests/icon/Save your Time.png";
+import icon4 from "../assests/icon/business growth.png";
+import icon5 from "../assests/icon/Better Decision.png";
+import icon6 from "../assests/icon/paperwork.png"
 
 const featureData = [
   {
-    title: "Automation",
-    para: "Lorem ipsum is simply dummy text of the priting and typescripting industry"
+    icon: icon1,
+    title: "Standardization of human resources information   ",
+    para: "HR software offers core HR functions that include attendance & time, payroll, tasks, leave management and travel expenses."
   },
   {
-    title: "Automation",
-    para: "Lorem ipsum is simply dummy text of the priting and typescripting industry"
+    icon: icon2,
+    title: "User-friendly",
+    para: "HR software is made for all types of organizations. It is easy to access the portal for each employee of the organization."
   },
   {
-    title: "Automation",
-    para: "Lorem ipsum is simply dummy text of the priting and typescripting industry"
+    icon: icon3,
+    title: "Save your time",
+    para: "HR software minimizes the employee’s effort and save the time to more focus on other strategic activities to grow the business."
   },
   {
-    title: "Automation",
-    para: "Lorem ipsum is simply dummy text of the priting and typescripting industry"
+    icon: icon4,
+    title: "Grow your business",
+    para: "HR software Keeps track of employee reviews, training sessions, and the performance of business to find actionable insights.  "
   },
   {
-    title: "Automation",
-    para: "Lorem ipsum is simply dummy text of the priting and typescripting industry"
+    icon: icon5,
+    title: "Helps to make a better decision",
+    para: "HR software produce reports that gives you a chance to understand the scenario and make decisions that craft a positive impact."
   },
   {
-    title: "Automation",
-    para: "Lorem ipsum is simply dummy text of the priting and typescripting industry"
+    icon: icon6,
+    title: "Reduces paperwork",
+    para: "HR software replaces the paper documents with standardized processes. It helps to save time and saves the documents in one place."
   },
 ];
 
@@ -77,45 +83,72 @@ const dataFooter3 = [
   }
 ]
 
-// const carouselImage = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10]
-
 const carouselReview = [
   {
-    name: "Name Surname",
-    detail: "Co-Founder & CTO",
-    quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
+    name: "Head Consultant",
+    detail: "AAYAAM",
+    quote: "They promised the service and delivered it exactly as they said",
     star: "&#9733;"
   },
   {
-    name: "Name Surname",
-    detail: "Co-Founder & CTO",
-    quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
+    name: "Vice President of Operations",
+    detail: "Educational Resources Company",
+    quote: "We were very happy with the outcome and the quality of the product",
     star: "&#9733;"
   },
   {
-    name: "Name Surname",
-    detail: "Co-Founder & CTO",
-    quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
+    name: "Business Development Manager",
+    detail: "Ovlin",
+    quote: "They provide creative and innovative solutions for customers",
     star: "&#9733;"
   },
   {
-    name: "Name Surname",
-    detail: "Co-Founder & CTO",
-    quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
+    name: "Managing Director",
+    detail: "Hostmud",
+    quote: "Growup Technologies is a place where you can get experienced virtual assistants",
     star: "&#9733;"
   },
-  {
-    name: "Name Surname",
-    detail: "Co-Founder & CTO",
-    quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
-    star: "&#9733;"
-  },
-  {
-    name: "Name Surname",
-    detail: "Co-Founder & CTO",
-    quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
-  }
-
+  // {
+  //   name: "Name Surname",
+  //   detail: "Co-Founder & CTO",
+  //   quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
+  //   star: "&#9733;"
+  // },
+  // {
+  //   name: "Name Surname",
+  //   detail: "Co-Founder & CTO",
+  //   quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
+  //   star: "&#9733;"
+  // }
 ]
 
-export { featureData, dataFooter2, dataFooter3, carouselReview } 
+const time = [
+  {
+    id: 0,
+    value: "12:00 PM"
+  },
+  {
+    id: 1,
+    value: "12:30 PM"
+  },
+  {
+    id: 2,
+    value: "01:00 PM"
+  },
+  {
+    id: 3,
+    value: "01: 30 PM"
+  },
+  {
+    id: 4,
+    value: "02: 00 PM"
+  },
+  {
+    id: 5,
+    value: "02: 30 PM"
+  }
+]
+
+const clientImage = [cliImage1, cliImage2, cliImage3, cliImage3, cliImage4, cliImage4]
+
+export { featureData, dataFooter2, dataFooter3, carouselReview, time, clientImage }
