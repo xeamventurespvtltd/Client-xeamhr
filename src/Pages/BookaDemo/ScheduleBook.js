@@ -17,7 +17,11 @@ const ScheduleBook = ({ heading, points }) => {
           <div className="row">
             <div className="col-md-8">
               <div className="schedule-list">
+<<<<<<< HEAD
                 <h5>Book a demo on HR software platform – Solution for multi-dimensional HR challenges</h5>
+=======
+                <h5>Steps to properly schedule a Demo:</h5>
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
                 <ul>
                   {renderedList}
                 </ul>

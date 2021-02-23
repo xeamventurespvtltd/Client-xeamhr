@@ -194,7 +194,6 @@ const services = [
   }
 ]
 
-
 class HrService extends React.Component {
   state = {
     Id: 0,

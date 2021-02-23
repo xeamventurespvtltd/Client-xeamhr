@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import { NavLink } from "react-router-dom"
 
+<<<<<<< HEAD
 const Navbar = ({ header, isSticky }) => {
   let NavBar = useRef()
   const handleClick = (e) => {
@@ -19,6 +20,11 @@ const Navbar = ({ header, isSticky }) => {
   }
   return (
     <div ref={NavBar} className={isSticky ? `${header} navbar-sticky` : `${header}`}>
+=======
+const Navbar = ({ header }) => {
+  return (
+    <div className={`${header}`}>
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
       <nav className="container navbar navbar-expand-lg navbar-light myNavbar">
         <NavLink
           exact className="navbar-brand" to="/">LOGO</NavLink>

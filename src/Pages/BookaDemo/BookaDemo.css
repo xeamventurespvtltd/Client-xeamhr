@@ -52,7 +52,11 @@
   color: #555;
   margin-left: 0.8rem;
   padding: 0.2rem 0;
+<<<<<<< HEAD
   line-height: 1.2;
+=======
+  line-height: 1.5;
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 }
 
 .schedule-list ul li>i {
@@ -61,6 +65,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
+<<<<<<< HEAD
+=======
+  line-height: 1.3;
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 }
 
 /* =========date-time-section========== */
@@ -68,6 +76,11 @@
   background-color: #f8f8f8;
 }
 
+<<<<<<< HEAD
+=======
+/* 
+.calender-box {} */
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 
 .cal-body {
   position: relative;
@@ -77,8 +90,13 @@
   justify-content: center;
   height: 100%;
   margin: 0 auto;
+<<<<<<< HEAD
   width: 100%;
   max-width: 350px;
+=======
+  max-width: 100%;
+  width: 350px;
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 }
 
 .calender-box {
@@ -102,8 +120,12 @@
   background: -webkit-linear-gradient(180deg, rgb(66, 206, 161), rgb(25, 90, 158));
   color: #fff;
   font-size: 1.2rem;
+<<<<<<< HEAD
   width: 100%;
   max-width: 85px;
+=======
+  width: 85px;
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
   height: 85px;
   border-radius: 50%;
   top: 50%;
@@ -162,17 +184,21 @@
   color: #eee;
 }
 
+<<<<<<< HEAD
 .time-duration-section h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
+=======
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 .query-schedule {
   background: #fff;
   padding: 2rem;
   color: rgb(25, 90, 158);
 }
 
+<<<<<<< HEAD
 /* ===========form css============= */
 .time-duration-section .form-body {
   position: relative;
@@ -243,6 +269,10 @@
 
 .time-duration-section input::placeholder {
   color: #777 !important;
+=======
+.time-duration-section input::placeholder {
+  color: #000 !important;
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 }
 
 .time-duration-section select {

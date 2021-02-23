@@ -90,6 +90,7 @@ a:hover {
   color: #fff !important;
 }
 
+<<<<<<< HEAD
 .headerHome.navbar-sticky {
   background: linear-gradient(to right, rgb(25, 90, 158) 5%, rgb(66, 206, 161) 100%);
   width: 100%;
@@ -112,6 +113,8 @@ a:hover {
   }
 }
 
+=======
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 .headerHome .nav-item a {
   color: #fff !important;
   font-size: 0.9rem !important;
@@ -123,7 +126,11 @@ a:hover {
   z-index: 10;
 }
 
+<<<<<<< HEAD
 /* 
+=======
+
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 .headerHome .nav-link.active {
   color: rgba(26, 89, 156) !important;
 } */
@@ -205,6 +212,75 @@ a:hover {
   position: relative;
 }
 
+<<<<<<< HEAD
+.headerBook .myNavbar button {
+=======
+.headerHome .myNavbar button {
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+<<<<<<< HEAD
+.headerBook .demo-button {
+=======
+.headerHome .demo-button {
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
+  display: flex;
+  margin-left: 20px;
+  width: 300px
+}
+
+<<<<<<< HEAD
+.headerBook .menu_active {
+=======
+.headerHome .menu_active {
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
+  font-weight: 500;
+  border-bottom: 1px solid rgba(26, 89, 156);
+}
+
+<<<<<<< HEAD
+=======
+.headerHome .demo-button a {
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: rgb(62, 198, 198);
+  padding: 0.4rem 1rem;
+  font-weight: 800;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.headerBook {
+  background: linear-gradient(to right, rgb(25, 90, 158, 0.9) 5%, rgb(66, 206, 161, 0.9) 100%);
+  /* padding-top: 1rem; */
+}
+
+.headerBook .navbar-brand {
+  font-size: 2.5rem;
+  color: #fff !important;
+}
+
+.headerBook .nav-item a {
+  color: #fff !important;
+  font-size: 1rem !important;
+  margin: 0 .4rem;
+}
+
+.headerBook .menu-body.show {
+  z-index: 10;
+}
+
+
+.headerBook .nav-link.active {
+  color: rgba(26, 89, 156) !important;
+}
+
+.myNavbar {
+  position: relative;
+}
+
 .headerBook .myNavbar button {
   border: 1px solid #fff !important;
   color: #fff !important;
@@ -221,6 +297,7 @@ a:hover {
   border-bottom: 1px solid rgba(26, 89, 156);
 }
 
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 .headerBook .demo-button a {
   font-size: 1.2rem;
   background-color: #fff;
@@ -542,6 +619,7 @@ a:hover {
   position: relative;
 }
 
+<<<<<<< HEAD
 .our-partner {
   background: rgba(66, 206, 161);
   height: 100%;
@@ -606,11 +684,42 @@ a:hover {
 .review-section .slick-dots li.slick-active button:before {
   background-color: rgb(66, 206, 161) !important;
   opacity: 1;
+=======
+.review-section h1 {
+  color: rgb(25, 90, 158);
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+.review-section .slick-dots {
+  padding-top: 1rem;
+}
+
+.review-section .slick-dots li button {
+  border: 2px solid rgba(66, 206, 161);
+  border-radius: 50%;
+}
+
+.review-section .slick-dots li button::before {
+  border-radius: 50%;
+  content: "" !important;
+  border: 2px solid rgb(66, 206, 161);
+  background: rgb(66, 206, 161) !important;
+}
+
+.review-section .slick-dots li.slick-active button:before {
+  color: rgb(66, 206, 161) !important;
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 }
 
 .review-box {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
+=======
+  border-radius: 15px;
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
   margin: 0 2rem;
 }
 
@@ -791,6 +900,7 @@ footer.footer1 {
 /* Media Queries starts here */
 @media screen and (max-width: 990px) {
   .headerHome .menu-body {
+<<<<<<< HEAD
     background: #fff;
     z-index: 100
   }
@@ -816,9 +926,31 @@ footer.footer1 {
   .headerBook .demo-button {
     position: absolute;
     top: 19px;
+=======
+    background: linear-gradient(90deg, rgb(25, 90, 158) 40%, rgb(66, 206, 161) 100%);
+    z-index: 100
+  }
+
+  .headerBook .menu-body {
+    background: none;
+    z-index: 100
+  }
+
+  .headerHome .demo-button {
+    position: absolute;
+    top: 34px;
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
     right: 80px;
     width: 200px;
   }
+
+  .headerBook .demo-button {
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    width: 200px;
+  }
+
 
   .banner-body h1 {
     font-size: 3rem;
@@ -889,6 +1021,7 @@ footer.footer1 {
   }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width:768px) {
   .client-image img {
     max-width: 170px;
@@ -896,6 +1029,8 @@ footer.footer1 {
   }
 }
 
+=======
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 @media screen and (max-width: 691px) {
 
   .banner-body h1 {
@@ -998,6 +1133,7 @@ footer.footer1 {
 
   .review-box {
     padding: 2rem 2rem 1rem 2rem;
+<<<<<<< HEAD
   }
 
   .client-image img {
@@ -1007,8 +1143,12 @@ footer.footer1 {
 
   .client-review h1 span {
     font-size: 2.2rem;
+=======
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
   }
+}
 
+<<<<<<< HEAD
   .headerHome .demo-button {
     position: absolute;
     top: 18px;
@@ -1040,6 +1180,24 @@ footer.footer1 {
     padding: 0.4rem 0.8rem;
   }
 
+=======
+@media screen and (max-width: 475px) {
+  .headerHome .demo-button {
+    right: 50px;
+  }
+
+  .headerBook .demo-button {
+    right: 50px;
+  }
+
+
+  .headerHome .demo-button a {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+  }
+
+>>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
   .headerBook .demo-button a {
     font-size: 1rem;
     font-weight: 700;
