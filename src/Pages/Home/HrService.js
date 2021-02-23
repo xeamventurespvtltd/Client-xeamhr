@@ -78,7 +78,7 @@ const services = [
     content: {
       line1: "Organize complex salary structures",
       line2: "Industry-particular Pay Schedule",
-      line3: "Management of salary sheets of employees",
+      line3: "Management of salary sheets of emplogyees",
       line4: "One-click payment",
       line5: "Auto-generated loans and advances",
       line6: "Generation of statutory reports"
