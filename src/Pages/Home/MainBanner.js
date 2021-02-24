@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom"
 import useSticky from "../../components/UseSticky"
 const MainBanner = ({ heading, subHeading }) => {
   const { isSticky, element } = useSticky();
-  console.log("mainBanner", element.current)
   return (
     <section id="home" className="main-banner">
       <Navbar

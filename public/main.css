@@ -196,8 +196,8 @@ a:hover {
   z-index: 10;
 }
 
-/* 
-.headerBook .nav-link.active {
+
+/* .headerBook .nav-link.active {
   color: rgba(26, 89, 156) !important;
 } */
 
@@ -822,7 +822,7 @@ footer.footer1 {
 
   .headerBook .demo-button {
     position: absolute;
-    top: 25px;
+    top: 19px;
     right: 80px;
     width: 200px;
   }

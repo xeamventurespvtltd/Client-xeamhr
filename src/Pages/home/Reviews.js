@@ -89,8 +89,6 @@ const Review = () => {
       </div>
     </section>
   )
-
-
 }
 
 export default Review
