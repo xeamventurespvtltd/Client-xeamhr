@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom"
 
 const Navbar = ({ header, isSticky }) => {
   let NavBar = useRef()
+
   const handleClick = (e) => {
     if (header === "headerHome") {
       let item = e.currentTarget;
@@ -37,14 +38,12 @@ const Navbar = ({ header, isSticky }) => {
             <li id="navLink"
               className="nav-item"
             >
-              {(header === "headerHome") ? <a href="#home" activeclassname="menu_active" className="nav-link active" aria-current="page"
-                onClick={handleClick}
-              >HOME</a> : <NavLink to="/" exact activeclassname="menu_active" className="nav-link active" aria-current="page"
-                onClick={handleClick}>HOME</NavLink>
+              {
+                (header === "headerHome") ? <a href="#home" activeclassname="menu_active" className="nav-link active" aria-current="page"
+                  onClick={handleClick}
+                >HOME</a> : <NavLink to="/" exact activeclassname="menu_active" className="nav-link active" aria-current="page"
+                  onClick={handleClick}>HOME</NavLink>
               }
-              {/* <a href="#home" activeclassname="menu_active" className="nav-link active" aria-current="page"
-                onClick={handleClick}
-              >HOME</a> */}
             </li>
             <li id="navLink"
               className="nav-item"

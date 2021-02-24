@@ -1,7 +1,9 @@
 import cliImage1 from "../assests/image/imgpsh_fullsize_anim (4).jpg";
 import cliImage2 from "../assests/image/imgpsh_fullsize_anim (3).jpg";
 import cliImage3 from "../assests/image/imgllsize_anim.jpg";
-import cliImage4 from "../assests/image/imgpsh_fullsizn5).jpg";
+import cliImage4 from "../assests/image/logo4.jpg";
+import cliImage5 from "../assests/image/logo5.jpg";
+import cliImage6 from "../assests/image/logo06.jpg";
 import icon1 from "../assests/icon/Standardization.png";
 import icon2 from "../assests/icon/User-Friendly.png";
 import icon3 from "../assests/icon/Save your Time.png";
@@ -149,6 +151,6 @@ const time = [
   }
 ]
 
-const clientImage = [cliImage1, cliImage2, cliImage3, cliImage3, cliImage4, cliImage4]
+const clientImage = [cliImage1, cliImage2, cliImage3, cliImage4, cliImage5, cliImage6]
 
 export { featureData, dataFooter2, dataFooter3, carouselReview, time, clientImage }

@@ -17,18 +17,16 @@ const BelowService = (props) => {
         </div>
         <div className="service-list">
           <ul className="p-0">
-            <li>
-              <i className="fas fa-circle"></i>
-              <h5>{props.Data.content.line1}</h5>
-            </li>
-            <li>
-              <i className="fas fa-circle"></i>
-              <h5>{props.Data.content.line2}</h5>
-            </li>
-            <li>
-              <i className="fas fa-circle"></i>
-              <h5>{props.Data.content.line3}</h5>
-            </li>
+            {
+              Object.values(props.Data.content).map((item, ind) => {
+                return (
+                  <li key={ind}>
+                    <i className="fas fa-circle"></i>
+                    <h5>{item}</h5>
+                  </li>
+                )
+              })
+            }
           </ul>
         </div>
         <div className="service-btn mt-4">
