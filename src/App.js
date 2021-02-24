@@ -2,7 +2,6 @@ import React from 'react';
 import Home from "./Pages/Home/Home";
 import BookaDemo from "./Pages/BookaDemo/BookaDemo"
 import ContactUs from "./Pages/ContactUs/ContactUs"
-// require('dotenv').config()
 
 import { Switch, Route } from "react-router-dom";
 

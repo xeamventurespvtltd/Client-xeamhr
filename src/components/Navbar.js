@@ -2,8 +2,9 @@ import React, { useRef } from "react"
 import { NavLink } from "react-router-dom"
 
 const Navbar = ({ header, isSticky }) => {
-  let NavBar = useRef()
 
+  let url = document.location.origin;
+  let NavBar = useRef()
   const handleClick = (e) => {
     if (header === "headerHome") {
       let item = e.currentTarget;
@@ -47,30 +48,29 @@ const Navbar = ({ header, isSticky }) => {
             </li>
             <li id="navLink"
               className="nav-item"
-
             >
-              <a href="#aboutus" activeclassname="menu_active" className="nav-link" aria-current="page"
+              <a href={(header === "headerHome") ? "#aboutus" : url + "#aboutus"} activeclassname="menu_active" className="nav-link" aria-current="page"
                 onClick={handleClick}
               >ABOUT US</a>
             </li>
             <li id="navLink"
               className="nav-item"
             >
-              <a href="#services" className="nav-link"
+              <a href={(header === "headerHome") ? "#services" : url + "#services"} className="nav-link"
                 onClick={handleClick}
               >SERVICES</a>
             </li>
             <li id="navLink"
               className="nav-item"
             >
-              <a href="#feature" className="nav-link"
+              <a href={(header === "headerHome") ? "#feature" : url + "#feature"} className="nav-link"
                 onClick={handleClick}
               >FEATURES</a>
             </li>
             <li id="navLink"
               className="nav-item"
             >
-              <a href="#review" className="nav-link"
+              <a href={(header === "headerHome") ? "#review" : url + "#review"} className="nav-link"
                 onClick={handleClick}
               >REVIEWS</a>
             </li>

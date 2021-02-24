@@ -24,7 +24,7 @@ const Address = () => {
                 <i className="fas fa-envelope"></i>
               </div>
               <div className="visit-text">
-                <h4>Email</h4>
+                <h4>xeam@xeamventures.com</h4>
               </div>
             </li>
             <li>
@@ -32,7 +32,7 @@ const Address = () => {
                 <i className="fas fa-phone-alt"></i>
               </div>
               <div className="visit-text">
-                <h4>+91+9876543210</h4>
+                <h4>+91-9856836002</h4>
               </div>
             </li>
           </ul>

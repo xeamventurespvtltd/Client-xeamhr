@@ -30,7 +30,6 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("updated error", errors)
     if (formValid(errors)) {
       alert("form submitted")
     } else {
@@ -123,7 +122,7 @@ const ContactForm = () => {
 
         <div className="conForm-button">
           <button type="submit">Submit</button>
-          {/* <small>Already have an account with this email</small> */}
+
         </div>
       </form>
     </div>

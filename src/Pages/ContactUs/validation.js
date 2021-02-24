@@ -1,6 +1,5 @@
 export default function validation(inputErrors) {
   let errors = {}
-  console.log("inside the", inputErrors)
   if (inputErrors.first_name.trim() === "") {
     errors.first_name = "First name is required"
   } else if (inputErrors.first_name.length < 3 && inputErrors.first_name.length > 0) {
