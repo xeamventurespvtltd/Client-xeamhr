@@ -81,7 +81,9 @@ const Navbar = ({ header, isSticky }) => {
         </div>
 
         <div className="demo-button">
+          {/* <div> */}
           <NavLink to="/book-a-demo">BOOK A DEMO</NavLink>
+          {/* </div> */}
         </div>
       </nav>
     </div>

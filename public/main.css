@@ -114,7 +114,7 @@ a:hover {
 
 .headerHome .nav-item a {
   color: #fff !important;
-  font-size: 0.9rem !important;
+  font-size: 0.85rem !important;
   margin: 0 .4rem;
   letter-spacing: 1px;
 }
@@ -166,7 +166,6 @@ a:hover {
   background: transparent !important;
   padding: 0 12px;
 }
-
 
 .headerBook.navbar-sticky {
   background: linear-gradient(to right, rgb(25, 90, 158) 5%, rgb(66, 206, 161) 100%);
@@ -795,6 +794,10 @@ footer.footer1 {
     z-index: 100
   }
 
+  .about-content h2 {
+    font-size: 1.6rem;
+  }
+
   .headerHome .nav-item a {
     background: linear-gradient(180deg, rgb(25, 90, 158), rgb(66, 206, 161));
     -webkit-background-clip: text;
@@ -808,14 +811,14 @@ footer.footer1 {
 
   .headerHome .demo-button {
     position: absolute;
-    top: 19px;
+    top: 18px;
     right: 80px;
     width: 200px;
   }
 
   .headerBook .demo-button {
     position: absolute;
-    top: 19px;
+    top: 18px;
     right: 80px;
     width: 200px;
   }
@@ -894,9 +897,29 @@ footer.footer1 {
     max-width: 170px;
     height: 100px;
   }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .feature-box img {
+    max-width: 80px;
+    height: 80px;
+  }
+
+  .feature-box h4 {
+    font-size: 1.2rem;
+  }
+
+  .feature-box p {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (max-width: 691px) {
+  .about-content h2 {
+    font-size: 1.3rem;
+  }
 
   .banner-body h1 {
     font-size: 2.8rem;
@@ -967,6 +990,10 @@ footer.footer1 {
 }
 
 @media screen and (max-width: 575px) {
+  .about-content h2 {
+    font-size: 1.2rem;
+  }
+
   .banner-body h1 {
     font-size: 2.5rem;
   }
@@ -1022,6 +1049,19 @@ footer.footer1 {
 
   .client-image img {
     max-width: 150px;
+  }
+
+  .feature-box img {
+    max-width: 75px;
+    height: 75px;
+  }
+
+  .feature-box h4 {
+    font-size: 1.15rem;
+  }
+
+  .feature-box p {
+    font-size: 1.05rem;
   }
 
 }
