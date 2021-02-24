@@ -4,7 +4,6 @@ import ScheduleBook from "./ScheduleBook";
 import BigFooter from "../Footer/BigFooter"
 import SmalllFooter from "../Footer/SmallFooter"
 import DateForDemo from "./DateForDemo"
-<<<<<<< HEAD
 import "./BookaDemo.css";
 
 const points = [
@@ -13,15 +12,6 @@ const points = [
   "Achieve increase in employee performance",
   "Reduce HR operational cost up to 50%",
   "Real-time support"
-=======
-import "./BookaDemo.css"
-
-const points = [
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
->>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 ]
 
 const BookaDemo = () => {

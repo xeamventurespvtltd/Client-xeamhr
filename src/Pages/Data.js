@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import cliImage1 from "../assests/image/imgpsh_fullsize_anim (4).jpg";
 import cliImage2 from "../assests/image/imgpsh_fullsize_anim (3).jpg";
 import cliImage3 from "../assests/image/imgllsize_anim.jpg";
@@ -10,8 +9,6 @@ import icon4 from "../assests/icon/business growth.png";
 import icon5 from "../assests/icon/Better Decision.png";
 import icon6 from "../assests/icon/paperwork.png"
 
-=======
->>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
 const featureData = [
   {
     icon: icon1,
@@ -150,41 +147,8 @@ const time = [
     id: 5,
     value: "02: 30 PM"
   }
-<<<<<<< HEAD
 ]
 
 const clientImage = [cliImage1, cliImage2, cliImage3, cliImage3, cliImage4, cliImage4]
 
 export { featureData, dataFooter2, dataFooter3, carouselReview, time, clientImage }
-=======
-]
-
-const time = [
-  {
-    id: 0,
-    value: "12:00 PM"
-  },
-  {
-    id: 1,
-    value: "12:30 PM"
-  },
-  {
-    id: 2,
-    value: "01:00 PM"
-  },
-  {
-    id: 3,
-    value: "01: 30 PM"
-  },
-  {
-    id: 4,
-    value: "02: 00 PM"
-  },
-  {
-    id: 5,
-    value: "02: 30 PM"
-  }
-]
-
-export { featureData, dataFooter2, dataFooter3, carouselReview, time }
->>>>>>> 166efbca40ce5ed64eff2f0fa7b9c382ea7e42fc
