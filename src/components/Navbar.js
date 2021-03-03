@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 
 const Navbar = ({ header, isSticky }) => {
 
-  let url = document.location.origin;
+  const url = document.location.origin;
   let NavBar = useRef()
   const handleClick = (e) => {
     if (header === "headerHome") {

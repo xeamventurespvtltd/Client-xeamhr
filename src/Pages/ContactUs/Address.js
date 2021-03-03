@@ -1,6 +1,7 @@
-import React from "react"
-import contact_image from "../../assests/image/contact-image.jpg"
-import con_icon from "../../assests/icon/con-icon.png"
+import React from "react";
+import contact_image from "../../assests/image/contact-image.jpg";
+import con_icon from "../../assests/icon/con-icon.png";
+import MapSection from "./MapSection"
 
 const Address = () => {
   return (
@@ -39,11 +40,7 @@ const Address = () => {
         </div>
         <div className="add-divider"></div>
         <div className="support-content">
-          <h3>SUPPORT</h3>
-          <p>Thank you for reaching out to us</p>
-          <p>Have a question in your mind about HR software services?</p>
-          <p>Feel free to call or e-mail HR Software or complete this brief form</p>
-          <p>Our representative will contact with you shortly</p>
+          <MapSection />
         </div>
       </div>
     </section>

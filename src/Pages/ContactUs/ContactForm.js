@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from "react";
-import validation from "./validation"
+import validation from "./validation";
+import axios from "axios";
 
-const formValid = (errors) => {
-  let valid = true
-  Object.values(errors).forEach((item) => {
-    if (item.length > 0) {
-      return valid = false
-    }
-  })
-  return valid
-}
 
 const ContactForm = () => {
+  // values of forms
   const [values, setValues] = useState({
     first_name: "",
     last_name: "",
     email: "",
     company_name: ""
   })
-
+  // containing errors from form field
   const [errors, setErrors] = useState({
     first_name: "",
     last_name: "",
@@ -27,11 +20,37 @@ const ContactForm = () => {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [response, setResponse] = useState(null)
+  const [loader, setLoader] = useState(false)
+  // handling the data from submitting form
+
+  const formValid = (errors) => {
+    let valid = true
+    Object.values(errors).forEach((item) => {
+      if (item.length > 0) {
+        return valid = false
+      }
+    });
+    return valid
+  }
 
   const handleSubmit = e => {
+    const formData = {}
     e.preventDefault();
     if (formValid(errors)) {
-      alert("form submitted")
+      setLoader(true)
+      const data = new FormData(e.target);
+      for (let key of data.keys()) {
+        formData[key] = data.get(key)
+      }
+      axios({
+        method: "post",
+        url: "/api/contact-us",
+        data: formData
+      }).then(response => {
+        setResponse(response.data)
+      })
+        .catch(err => console.log("error in submitting the form", err))
     } else {
       console.error("display error")
     }
@@ -60,9 +79,10 @@ const ContactForm = () => {
 
   return (
     <div className="conForm-body">
+
       <form className="g-5" onSubmit={handleSubmit}>
         <div className="conForm-box mb-3">
-          <label htmlFor="inputFirstname" className="form-label">FIRST NAME</label>
+          <label htmlFor="inputFirstname" className="form-label">FIRST NAME*</label>
           <div className={handleClassname(errors.first_name)}>
             <input type="text" className="form-control" name="first_name" placeholder="First Name" aria-label="First name"
               onChange={handleInput}
@@ -75,7 +95,7 @@ const ContactForm = () => {
         </div>
 
         <div className="conForm-box mb-3">
-          <label htmlFor="inputLastname" className="form-label">LAST NAME</label>
+          <label htmlFor="inputLastname" className="form-label">LAST NAME*</label>
           <div className={handleClassname(errors.last_name)}>
             <input type="text" className="form-control" name="last_name" placeholder="Last Name" aria-label="First name"
               onChange={handleInput}
@@ -88,7 +108,7 @@ const ContactForm = () => {
         </div>
 
         <div className="conForm-box mb-3">
-          <label htmlFor="inputEmail4" className="form-label">EMAIL</label>
+          <label htmlFor="inputEmail4" className="form-label">EMAIL*</label>
           <div className={handleClassname(errors.email)}>
             <input type="email" className="form-control" name="email" placeholder="Email"
               onChange={handleInput}
@@ -101,7 +121,7 @@ const ContactForm = () => {
         </div>
 
         <div className="conForm-box mb-3">
-          <label htmlFor="inputLastname" className="form-label">COMPANY NAME</label>
+          <label htmlFor="inputLastname" className="form-label">COMPANY NAME*</label>
           <div className={handleClassname(errors.company_name)}>
             <input type="text" className="form-control" name="company_name" placeholder="Your Company Name"
               onChange={handleInput}
@@ -120,11 +140,22 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="conForm-button">
-          <button type="submit">Submit</button>
-
-        </div>
+        {(!response && loader) ?
+          <div className="conForm-button">
+            <button type="submit">
+              <span className="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+              Submit
+            </button>
+          </div>
+          :
+          <div className="conForm-button">
+            <button type="submit">Submit</button>
+          </div>
+        }
       </form>
+      {(response && formValid(errors)) ? <div className="form-submit">
+        <h4>Form Submitted!!</h4>
+      </div> : null}
     </div>
   )
 }

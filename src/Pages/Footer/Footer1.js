@@ -8,8 +8,8 @@ const Footer1 = ({ title }) => {
         <p>Xeam Tower</p>
         <p>E-202, Phase 8b,</p>
         <p>Industrial Area, Mohali</p>
-        <p>+91-1234567890</p>
-        <p>abc@gmail.com</p>
+        <a href="tel:9856836002">+91-9856836002</a>
+        <a href="mailto:xeam@xeamventures.com">xeam@xeamventures.com</a>
       </div>
     </>
   )

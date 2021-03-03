@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import { NavLink } from "react-router-dom"
 
 const BelowService = (props) => {
   return (
@@ -30,7 +31,7 @@ const BelowService = (props) => {
           </ul>
         </div>
         <div className="service-btn mt-4">
-          <a href="/">Book a Demo</a>
+          <NavLink to="/book-a-demo">Book a Demo</NavLink>
         </div>
       </div>
     </div>

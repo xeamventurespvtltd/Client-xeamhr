@@ -5,8 +5,8 @@ import useForm from "../../components/useForm";
 import validate from "../../components/validateInfo";
 import "../../components/styles/VerticalCarousel.css"
 
-const TimeDuration = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors, isSubmitting } = useForm(submitForm, validate);
+const TimeDuration = ({ submitForm, screenLoader }) => {
+  const { handleChange, handleSubmit, values, errors, isSubmitting } = useForm(submitForm, validate, screenLoader);
   const { firstName, lastName, email, companyName, phoneNumber } = errors;
   return (
     <section className="time-duration-section">
@@ -15,11 +15,12 @@ const TimeDuration = ({ submitForm }) => {
       </div>
       <h2>User Info:</h2>
       <form className="g-3"
+        onSubmit={handleSubmit}
       >
         <div className="row">
           <div className="col-md-6 mb-3">
             <div className="form-body">
-              <label forhtml="exampleFormControlInput1" className="form-label"> Enter First Name{(firstName && isSubmitting) ? <span>*</span> : null}</label>
+              <label forhtml="exampleFormControlInput1" className="form-label"> Enter First Name*</label>
               <div className="form-box" style={(firstName && isSubmitting) ? { border: "1px solid red" } : null}>
                 <div className="form-validation">
                   <i className="fas fa-exclamation-circle"></i>
@@ -33,7 +34,7 @@ const TimeDuration = ({ submitForm }) => {
           </div>
           <div className="col-md-6 mb-3">
             <div className="form-body">
-              <label forhtml="exampleFormControlInput1" className="form-label">Enter Last Name {(lastName && isSubmitting) ? <span>*</span> : null}</label>
+              <label forhtml="exampleFormControlInput1" className="form-label">Enter Last Name* {(lastName && isSubmitting) ? <span>*</span> : null}</label>
               <div className="form-box" style={(lastName && isSubmitting) ? { border: "1px solid red" } : null}>
 
                 <input type="text" className="form-control" name="lastName" placeholder="Last name" aria-label="Last name"
@@ -45,7 +46,7 @@ const TimeDuration = ({ submitForm }) => {
           </div>
           <div className="col-md-6 mb-3">
             <div className="form-body">
-              <label forhtml="exampleFormControlInput1" className="form-label">Enter Email{(email && isSubmitting) ? <span>*</span> : null}</label>
+              <label forhtml="exampleFormControlInput1" className="form-label">Enter Email*</label>
               <div className="form-box" style={(email && isSubmitting) ? { border: "1px solid red" } : null}>
 
                 <input type="email" className="form-control" name="email" id="inputEmail4" placeholder="Email"
@@ -60,7 +61,7 @@ const TimeDuration = ({ submitForm }) => {
           </div>
           <div className="col-md-6 mb-3">
             <div className="form-body">
-              <label forhtml="exampleFormControlInput1" className="form-label">Enter Company Name{(companyName && isSubmitting) ? <span>*</span> : null}</label>
+              <label forhtml="exampleFormControlInput1" className="form-label">Enter Company Name*</label>
               <div className="form-box" style={(companyName && isSubmitting) ? { border: "1px solid red" } : null}>
                 <input type="text" className="form-control" name="companyName" placeholder="Company Name" aria-label="First name"
                   value={values.companyName}
@@ -71,9 +72,9 @@ const TimeDuration = ({ submitForm }) => {
           </div>
           <div className="col-md-6 mb-3">
             <div className="form-body">
-              <label forhtml="exampleFormControlInput1" className="form-label">Enter Phone Number{(phoneNumber && isSubmitting) ? <span>*</span> : null}</label>
+              <label forhtml="exampleFormControlInput1" className="form-label">Enter Phone Number*</label>
               <div className="form-box" style={(phoneNumber && isSubmitting) ? { border: "1px solid red" } : null}>
-                <input type="text" className="form-control" name="phoneNumber" pattern="[0-9]" placeholder="Phone Number" aria-label="First name"
+                <input type="text" className="form-control" name="phoneNumber" placeholder="Phone Number" aria-label="First name"
                   value={values.phoneNumber}
                   onChange={(e) => {
                     const value = e.target.value.replace(/[^0-9]/g, '')
@@ -113,8 +114,7 @@ const TimeDuration = ({ submitForm }) => {
           />
         </div>
         <div className="time-submit">
-          <button type="button"
-            onClick={handleSubmit}
+          <button type="submit"
           >
             SUBMIT
           </button>

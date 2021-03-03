@@ -13,7 +13,6 @@ const ContactUs = () => {
         header="headerBook"
       />
       <ContactSection />
-      <MapSection />
       <BigFooter />
       <SmallFooter />
     </>

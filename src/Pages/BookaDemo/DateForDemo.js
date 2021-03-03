@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Calender from "../../components/Calender";
 import TimeDuration from "./TimeDuration"
 
-const DateForDemo = () => {
+const DateForDemo = ({ screenLoader }) => {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const submitForm = () => {
     console.log("submitted", isSubmitted)
@@ -28,6 +28,7 @@ const DateForDemo = () => {
         <div className="col-md-8">
           {(isSubmitted) ? <h1>form submitted</h1> : <TimeDuration
             submitForm={submitForm}
+            screenLoader={screenLoader}
           />}
         </div>
       </div>

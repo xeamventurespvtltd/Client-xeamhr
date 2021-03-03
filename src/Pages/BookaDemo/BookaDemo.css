@@ -4,6 +4,21 @@
   padding: 3rem 0;
 }
 
+.book_a_demo-section {
+  position: relative;
+}
+
+.book_a_demo-section .loader-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .schedule-book h1 {
   color: rgb(25, 90, 158);
   font-weight: 700;

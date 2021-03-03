@@ -26,7 +26,8 @@ const Footer = ({ logo }) => {
                 </div>
                 <div className="col-md-3 col-sm-6 mb-3">
                   <Footer4 title="Subscribe to XEAMHR via Email"
-                    para="Excepteur sint occaecat cupidata njo prodiiont, sunt in cupta qui offica"
+                    para="Get the most recent updates from
+                        our site and be updated your self"
                   />
                 </div>
               </div>

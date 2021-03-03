@@ -108,16 +108,18 @@
 }
 
 .conForm-button button {
+  display: flex;
+  align-items: center;
   margin: 20px 0 10px 0;
   background: rgb(66, 206, 161);
+  justify-content: space-between;
   color: #fff;
-  padding: 0.4rem 2.2rem;
+  padding: 0.4rem 1.5rem;
   font-size: 1.45rem;
   border: none;
   letter-spacing: 1px;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  /* transition: transform 0.25s linear; */
 }
 
 .conForm-button small {
@@ -131,6 +133,12 @@
 
 .conForm-button button:active {
   transform: scale(1.011);
+}
+
+.form-submit h4 {
+  font-size: 1rem;
+  color: rgb(29, 104, 158);
+  font-weight: 600;
 }
 
 /* ==========address section========= */
@@ -241,39 +249,27 @@
 }
 
 /* ======== map styles ======== */
-.map-section {
-  padding: 3rem 0;
-}
-
 .map-section h3 {
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 .map-container {
-  background: linear-gradient(45deg, rgb(25, 90, 158), rgb(66, 206, 161));
+  background: #fff;
   padding: 4px;
   margin-bottom: 1rem;
+  border-radius: 5px;
 }
 
 .map-container>div {
   margin: 0;
-
-}
-
-.map-container .mapouter {
-  position: relative;
-  text-align: right;
-  width: 100%;
-  padding: 0.8rem;
-  background: #fff;
 }
 
 .map-container .gmap_canvas {
   overflow: hidden;
   background: none !important;
   width: 100%;
-  height: 420px;
+  height: 120px;
 }
 
 @media screen and (max-width:768px) {
