@@ -68,6 +68,7 @@
   margin-left: 0.8rem;
   padding: 0.2rem 0;
   line-height: 1.2;
+  font-weight: 500;
 }
 
 .schedule-list ul li>i {
@@ -93,7 +94,6 @@
   height: 100%;
   margin: 0 auto;
   width: 100%;
-  max-width: 350px;
 }
 
 .calender-box {
@@ -101,6 +101,8 @@
   padding: 0.21rem;
   border-radius: 5px;
   position: relative;
+  width: 100%;
+  max-width: 350px;
 }
 
 .cal-top {
@@ -265,8 +267,18 @@
 }
 
 @media screen and (max-width: 768px) {
+  .calender-box {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .schedule-book h1 {
     font-size: 1.8rem;
+  }
+
+  .calender-box {
+    max-width: 350px;
   }
 
   .automate span {

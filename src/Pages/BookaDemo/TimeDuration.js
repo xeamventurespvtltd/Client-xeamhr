@@ -5,11 +5,12 @@ import useForm from "../../components/useForm";
 import validate from "../../components/validateInfo";
 import "../../components/styles/VerticalCarousel.css"
 
-const TimeDuration = ({ submitForm, screenLoader }) => {
-  const { handleChange, handleSubmit, values, errors, isSubmitting } = useForm(submitForm, validate, screenLoader);
+const TimeDuration = ({ submitForm, screenLoader, timing }) => {
+  const { handleChange, handleSubmit, values, errors, isSubmitting } = useForm(submitForm, validate, screenLoader, timing);
   const { firstName, lastName, email, companyName, phoneNumber } = errors;
   return (
-    <section className="time-duration-section">
+
+    <section className="time-duration-section container-fluid">
       <div className="error-text">
         {((firstName || lastName || email || companyName || phoneNumber) && isSubmitting ? <small className="error-text">All fields in red are mandatory* </small> : null)}
       </div>
@@ -18,7 +19,7 @@ const TimeDuration = ({ submitForm, screenLoader }) => {
         onSubmit={handleSubmit}
       >
         <div className="row">
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 col-sm-6 mb-3">
             <div className="form-body">
               <label forhtml="exampleFormControlInput1" className="form-label"> Enter First Name*</label>
               <div className="form-box" style={(firstName && isSubmitting) ? { border: "1px solid red" } : null}>
@@ -32,7 +33,7 @@ const TimeDuration = ({ submitForm, screenLoader }) => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 col-sm-6 mb-3">
             <div className="form-body">
               <label forhtml="exampleFormControlInput1" className="form-label">Enter Last Name* {(lastName && isSubmitting) ? <span>*</span> : null}</label>
               <div className="form-box" style={(lastName && isSubmitting) ? { border: "1px solid red" } : null}>
@@ -44,7 +45,7 @@ const TimeDuration = ({ submitForm, screenLoader }) => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 col-sm-6 mb-3">
             <div className="form-body">
               <label forhtml="exampleFormControlInput1" className="form-label">Enter Email*</label>
               <div className="form-box" style={(email && isSubmitting) ? { border: "1px solid red" } : null}>
@@ -59,7 +60,7 @@ const TimeDuration = ({ submitForm, screenLoader }) => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 col-sm-6 mb-3">
             <div className="form-body">
               <label forhtml="exampleFormControlInput1" className="form-label">Enter Company Name*</label>
               <div className="form-box" style={(companyName && isSubmitting) ? { border: "1px solid red" } : null}>
@@ -70,7 +71,7 @@ const TimeDuration = ({ submitForm, screenLoader }) => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 col-sm-6 mb-3">
             <div className="form-body">
               <label forhtml="exampleFormControlInput1" className="form-label">Enter Phone Number*</label>
               <div className="form-box" style={(phoneNumber && isSubmitting) ? { border: "1px solid red" } : null}>
@@ -85,7 +86,7 @@ const TimeDuration = ({ submitForm, screenLoader }) => {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-6 mb-3">
+            <div className="col-md-6 col-sm-6 mb-3">
               <div className="form-body">
                 <label forhtml="exampleFormControlInput1" className="form-label">MEETING DURATION</label>
                 <div className="form-box">
@@ -95,11 +96,11 @@ const TimeDuration = ({ submitForm, screenLoader }) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 mb-3">
+            <div className="col-md-6 col-sm-6 mb-3">
               <div className="form-body">
                 <label forhtml="exampleFormControlInput1" className="form-label">WHAT TIME WORKS BEST?</label>
                 <div className="form-box">
-                  <select className="form-select" aria-label="Default select example">
+                  <select className="form-select" name="timeDuration" aria-label="Default select example">
                     <option defaultValue>UTC +05:30 New Delhi, Mumbai, and Calcutta</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>

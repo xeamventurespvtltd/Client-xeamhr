@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import validation from "./validation";
 import axios from "axios";
 
-
 const ContactForm = () => {
   // values of forms
   const [values, setValues] = useState({
@@ -43,10 +42,27 @@ const ContactForm = () => {
       for (let key of data.keys()) {
         formData[key] = data.get(key)
       }
+      const toUser = {
+        subject: 'Mail Test user contact',
+        content: '<html><body>Hello we are from xeam ventures, <br> Thank your for subscribing our newsletter</body><br></html>'
+      }
+      const toUs = {
+        subject: "mail test us contract",
+        content: `<html><body>
+        <p>${formData.first_name} ${formData.last_name}</p>
+        <p>${formData.email}</p>
+        <p>${formData.company_name}</p>
+        </body><br></html>`
+      }
+      // const newData = Object.assign({ ...formData }, toUser)
       axios({
         method: "post",
         url: "/api/contact-us",
-        data: formData
+        data: {
+          email: formData.email,
+          toUser,
+          toUs
+        }
       }).then(response => {
         setResponse(response.data)
       })

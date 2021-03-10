@@ -22,8 +22,6 @@ import image5 from "../../assests/image/task.png"
 import image6 from "../../assests/image/attendance.png"
 import image7 from "../../assests/image/leave.png"
 import image8 from "../../assests/image/dashboard.png"
-// import image9 from "../../assests/image/photo-1494253109108-2e30c049369b.jpg"
-
 
 const services = [
   {

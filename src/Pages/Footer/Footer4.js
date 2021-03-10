@@ -17,12 +17,21 @@ const Footer4 = ({ title, para }) => {
       subject: 'Mail Test',
       content: '<html><body>Hello we are from xeam ventures, <br> Thank your for subscribing our newsletter</body><br></html>'
     }
+
+    const toUs = {
+      subject: "user is subscribing",
+      content: `<html><body>hello a user has subs ${formData.email}</body><br></html>`
+    }
     const newData = Object.assign({ ...formData }, toUser)
     console.log("formData", newData)
     axios({
       method: "post",
       url: "/api/subscribe",
-      data: newData
+      data: {
+        email: formData.email,
+        toUser,
+        toUs
+      }
     }).then(response => {
       setResponse(response.data)
     })

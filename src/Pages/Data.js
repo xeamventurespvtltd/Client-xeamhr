@@ -46,23 +46,23 @@ const featureData = [
 
 const dataFooter2 = [
   {
-    link: "Contact Us",
+    link: "Home",
     loc: "/"
   },
   {
-    link: "Ordering & Payment",
+    link: "Contac Us",
+    loc: "/contact-us"
+  },
+  {
+    link: "Book a Demo",
+    loc: "/book-a-demo"
+  },
+  {
+    link: "Terms and Condition",
     loc: "/"
   },
   {
-    link: "Shipping",
-    loc: "/"
-  },
-  {
-    link: "Returns",
-    loc: "/"
-  },
-  {
-    link: "FAQ",
+    link: "Privacy Policy",
     loc: "/"
   }];
 
@@ -110,18 +110,6 @@ const carouselReview = [
     quote: "Growup Technologies is a place where you can get experienced virtual assistants",
     star: "&#9733;"
   },
-  // {
-  //   name: "Name Surname",
-  //   detail: "Co-Founder & CTO",
-  //   quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
-  //   star: "&#9733;"
-  // },
-  // {
-  //   name: "Name Surname",
-  //   detail: "Co-Founder & CTO",
-  //   quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry printer took a galley of type and scrambled it to make a type specimen book leap into electronic typesetting, remaining.",
-  //   star: "&#9733;"
-  // }
 ]
 
 const time = [
