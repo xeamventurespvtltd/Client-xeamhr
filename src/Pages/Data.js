@@ -1,3 +1,4 @@
+import moment from 'moment';
 import cliImage1 from "../assests/image/imgpsh_fullsize_anim (4).jpg";
 import cliImage2 from "../assests/image/imgpsh_fullsize_anim (3).jpg";
 import cliImage3 from "../assests/image/imgllsize_anim.jpg";
@@ -112,32 +113,15 @@ const carouselReview = [
   },
 ]
 
-const time = [
-  {
-    id: 0,
-    value: "12:00 PM"
-  },
-  {
-    id: 1,
-    value: "12:30 PM"
-  },
-  {
-    id: 2,
-    value: "01:00 PM"
-  },
-  {
-    id: 3,
-    value: "01: 30 PM"
-  },
-  {
-    id: 4,
-    value: "02: 00 PM"
-  },
-  {
-    id: 5,
-    value: "02: 30 PM"
-  }
-]
+let startTime = "09:30 AM";
+let timeSlot = [];
+for(let i = 0; i < 17; i++){
+    startTime = moment(`${startTime}`, "hh:mm A").add(30, "minutes").format("hh:mm A")
+    timeSlot.push(startTime)    
+}
+const time = timeSlot.map((time, index) => {
+    return { id: index, value: time}
+})
 
 const clientImage = [cliImage1, cliImage2, cliImage3, cliImage4, cliImage5, cliImage6]
 

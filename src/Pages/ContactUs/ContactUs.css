@@ -20,6 +20,19 @@
   position: relative;
 }
 
+.label-color {
+  color: rgb(25, 90, 158);
+}
+
+.error-color {
+  color: rgb(241, 39, 32);
+  font-size: small;
+}
+
+.form-control.error {
+  border: 1px solid rgb(241, 39, 32);
+}
+
 .conForm-input {
   height: 42px !important;
   position: relative;
@@ -41,11 +54,11 @@
   border: 1px solid #74b49b;
 }
 
-.conForm-input+small {
+.conForm-input + small {
   display: none;
 }
 
-.conForm-input.error+small {
+.conForm-input.error + small {
   display: block;
   color: red;
   padding: 0 0 0 10px;
@@ -62,17 +75,17 @@
   color: #bbb;
 }
 
-.conForm-input>i.fa-times-circle,
-.conForm-input>i.fa-check-circle {
+.conForm-input > i.fa-times-circle,
+.conForm-input > i.fa-check-circle {
   display: none;
 }
 
-.conForm-input.error>i.fa-times-circle {
+.conForm-input.error > i.fa-times-circle {
   display: block;
   color: #ec5858d4;
 }
 
-.conForm-input.success>i.fa-check-circle {
+.conForm-input.success > i.fa-check-circle {
   display: block;
   color: #74b49b;
 }
@@ -82,7 +95,7 @@
   font-size: 1.02rem;
   font-weight: 500;
   letter-spacing: 1px;
-  margin: 0 0 5px 5px
+  margin: 0 0 5px 5px;
 }
 
 .conForm-box input::placeholder,
@@ -164,7 +177,6 @@
   border-radius: 10px;
 }
 
-
 .address-body:before {
   content: "";
   position: absolute;
@@ -173,7 +185,12 @@
   top: 0;
   left: 0;
   bottom: 0;
-  background: linear-gradient(160deg, rgba(25, 90, 158, 0.8) 10%, rgba(66, 206, 161, 0.8)) 60%;
+  background: linear-gradient(
+      160deg,
+      rgba(25, 90, 158, 0.8) 10%,
+      rgba(66, 206, 161, 0.8)
+    )
+    60%;
   z-index: -1;
   border-radius: 10px;
 }
@@ -188,7 +205,7 @@
   padding: 0;
 }
 
-.visit-list ul>li {
+.visit-list ul > li {
   display: flex;
   align-items: center;
   margin-bottom: 0.6rem;
@@ -212,7 +229,11 @@
 
 .visit-list i {
   font-size: 1.15rem;
-  background: -webkit-linear-gradient(220deg, rgb(25, 90, 158), rgb(66, 206, 161));
+  background: -webkit-linear-gradient(
+    220deg,
+    rgb(25, 90, 158),
+    rgb(66, 206, 161)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
@@ -261,7 +282,7 @@
   border-radius: 5px;
 }
 
-.map-container>div {
+.map-container > div {
   margin: 0;
 }
 
@@ -272,7 +293,7 @@
   height: 120px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .contact-text h1 {
     font-size: 2rem;
   }
@@ -283,7 +304,6 @@
 }
 
 @media screen and (max-width: 575px) {
-
   .conForm-body {
     padding-left: 2rem;
   }

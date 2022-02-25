@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "./static/css/main.33190251.css",
+    "main.js": "./static/js/main.9d9b719d.js",
+    "static/media/attendance.png": "./static/media/attendance.a4c08a787006e4389960.png",
+    "static/media/task.png": "./static/media/task.415936822df630515dcd.png",
+    "static/media/recruitment.png": "./static/media/recruitment.fe86ca138e4b95e63317.png",
+    "static/media/dashboard.png": "./static/media/dashboard.fdb2b173d9b70893de8e.png",
+    "static/media/leave.png": "./static/media/leave.08fae1589069809d0e72.png",
+    "static/media/lead.png": "./static/media/lead.c0dcfa15a9cc509b9ed7.png",
+    "static/media/payroll.png": "./static/media/payroll.bec17e18a0c5a489e6f1.png",
+    "static/media/document.png": "./static/media/document.c39ec3b91610d09afc3f.png",
+    "static/media/travel.png": "./static/media/travel.35ec2f566f6cad27ef70.png",
+    "static/media/contact-image.jpg": "./static/media/contact-image.6a76ace9feecc569217b.jpg",
+    "static/media/imgpsh_fullsize_anim (4).jpg": "./static/media/imgpsh_fullsize_anim (4).baf6967893c8a03ef38b.jpg",
+    "static/media/logo5.jpg": "./static/media/logo5.d522e149ddf4f3f1ba9b.jpg",
+    "static/media/logo4.jpg": "./static/media/logo4.56621b743672a089ab42.jpg",
+    "static/media/imgllsize_anim.jpg": "./static/media/imgllsize_anim.6e010ccfa61839cacc18.jpg",
+    "static/media/logo06.jpg": "./static/media/logo06.6bfe1e1be36656c6e943.jpg",
+    "static/media/imgpsh_fullsize_anim (3).jpg": "./static/media/imgpsh_fullsize_anim (3).295024f413f892365239.jpg",
+    "static/media/Save your Time.png": "./static/media/Save your Time.70dc0301372dd9df8933.png",
+    "static/media/Standardization.png": "./static/media/Standardization.71dc06af277ba113bc27.png",
+    "static/media/paperwork.png": "./static/media/paperwork.79ffa76ac20b18ddc6b9.png",
+    "static/media/Better Decision.png": "./static/media/Better Decision.428a89ff9de451184cf7.png",
+    "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "./static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "./index.html",
+    "main.33190251.css.map": "./static/css/main.33190251.css.map",
+    "main.9d9b719d.js.map": "./static/js/main.9d9b719d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33190251.css",
+    "static/js/main.9d9b719d.js"
+  ]
+}

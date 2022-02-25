@@ -1,20 +1,37 @@
 import React from 'react';
+import { Router, Switch, Route } from "react-router-dom";
+import { connect } from "react-redux";
 import Home from "./Pages/Home/Home";
 import BookaDemo from "./Pages/BookaDemo/BookaDemo"
 import ContactUs from "./Pages/ContactUs/ContactUs"
+import Header from './components/Header';
+import history from './history';
+import ScrollToTop from './components/ScrollToTop';
 
-import { Switch, Route } from "react-router-dom";
-
-const App = () => {
-  return (
-    <>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/book-a-demo" component={BookaDemo} />
-        <Route exxact path="/contact-us" component={ContactUs} />
-      </Switch>
-    </>
-  )
+const App = (props) => {
+    return (
+        <>
+            <Router history={history}>
+                <ScrollToTop />
+                <div>
+                    <Route path="/" exact component={Home} />
+                </div>
+                <div>
+                    {(props.header) && <Header className={'headerBook'}/>}
+                    <Switch>
+                        <Route path={"/contact-us"} exact component={ContactUs} />
+                        <Route path={"/book-a-demo"} exact component={BookaDemo} />
+                    </Switch>
+                </div>
+            </Router>
+        </>
+    )
 }
 
-export default App
+const mapStateToProps = (state) => {
+    return {
+        header: state.header
+    }
+}
+
+export default connect(mapStateToProps)(App);

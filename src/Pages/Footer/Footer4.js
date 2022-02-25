@@ -1,77 +1,134 @@
 import React, { useState } from "react";
-import axios from "axios";
-let formData = {};
+import { connect } from 'react-redux';
+import { Field, reduxForm, reset } from 'redux-form';
+import ReCAPTCHA from "react-google-recaptcha";
+import { sendMail, showLoader } from '../../actions';
 
-const Footer4 = ({ title, para }) => {
-  const [response, setResponse] = useState(null)
-  const [loader, setLoader] = useState(false)
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setLoader(true)
-    const data = new FormData(e.target);
-    for (let key of data.keys()) {
-      formData[key] = data.get(key)
+class Footer4 extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            response: null,
+            token: ''
+        }
+        this.recaptchaRef = React.createRef();
+    }
+  
+    handleSubmit = (formValues) => {
+        this.props.showLoader(true);
+        this.recaptchaRef.current.execute().then((token) => {
+            this.setState({token}, () => {
+                const { token } = this.state;
+                const formData = {
+                    subscribe: 1,
+                    email: formValues.email,
+                    token: token
+                }
+                this.props.sendMail(formData, 'homePage');
+            })
+        })
     }
 
-    const toUser = {
-      subject: 'Mail Test',
-      content: '<html><body>Hello we are from xeam ventures, <br> Thank your for subscribing our newsletter</body><br></html>'
+    renderError = ({error, touched}) => {
+        //console.log("CHECK IF TOUCHED: ", error, touched)
+        if(error && touched){
+            //console.log("@@@ TOUCHED: ", error, touched)
+            return (
+                <div className="position-absolute">
+                    <p className="fw-light demo-error-color">{error}</p>
+                </div>
+            );
+        }
     }
 
-    const toUs = {
-      subject: "user is subscribing",
-      content: `<html><body>hello a user has subs ${formData.email}</body><br></html>`
-    }
-    const newData = Object.assign({ ...formData }, toUser)
-    console.log("formData", newData)
-    axios({
-      method: "post",
-      url: "/api/subscribe",
-      data: {
-        email: formData.email,
-        toUser,
-        toUs
-      }
-    }).then(response => {
-      setResponse(response.data)
-    })
-      .catch(err => console.log("error in submitting the form", err))
-  }
-
-  const emailHandle = () => {
-    if (!loader) {
-      return (
-        <form className="row g-3" onSubmit={handleSubmit} method="post">
-          <div className="col-auto">
-            <input type="email" name="email" className="form-control" placeholder="Email Address" />
-          </div>
-          <div className="col-auto">
-            <button type="submit" className="btn btn-primary mb-3">SUBSCRIBE</button>
-          </div>
-        </form>
-      )
-    }
-    else {
-      return (
-        (!response) ?
-          <div className="d-flex justify-content-center text-white">
-            <div className="spinner-border" role="status">
-              <span className="visually-hidden">Loading...</span>
+    renderItem = ({input, placeholder, meta, type}) => {
+        const className = 'form-control';
+        //console.log("RENDER CLASSNAME: ", className)
+        return (
+            <div className="pb-3 mb-2">
+                <input 
+                    className={`${className} w-100 pl-5`} 
+                    type={type} 
+                    {...input} 
+                    placeholder={placeholder}
+                    autoComplete="off" 
+                />
+                {this.renderError(meta)}
             </div>
-          </div>
-          :
-          <div className="subs-email">Thank You For Subscribing, <br /> Please check your mail..</div>
-      )
+        );
     }
-  }
 
-  return (
-    <div className="footer-contact">
-      <h6>{title}</h6>
-      <p>{para}</p>
-      {emailHandle()}
-    </div>
-  )
+    emailHandle = () => {
+        if (!this.props.loader) {
+            return (
+                <form className="row g-3" onSubmit={this.props.handleSubmit(this.handleSubmit)} method="post">
+                    <div className="col-auto">
+                        <Field placeholder="Email Address" name="email" type="email" component={this.renderItem} />
+                    </div>
+                    <div className="col-auto">
+                        <button type="submit" className="btn btn-primary mb-3">SUBSCRIBE</button>
+                    </div>
+                </form>
+            )
+        }else {
+            return (
+                <div className="d-flex justify-content-center text-white">
+                    <div className="spinner-border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            )
+        }
+    }
+
+    render(){
+        const { title, para } = this.props;
+        return (
+            <div className="footer-contact">
+                <h6>{title}</h6>
+                <p>{para}</p>
+                {this.emailHandle()}
+                <div>
+                    <ReCAPTCHA
+                        ref={this.recaptchaRef}
+                        size="invisible"
+                        sitekey="6LcGC4ceAAAAAK-2mg8oUKuqT1wNmHVu9ScTi_CY"
+                        //onChange={(token) => this.setState({token}, () => console.log("CAPTCHA: ", this.state.token))}
+                    />
+                </div>
+            </div>
+        )
+    }
 }
 
-export default Footer4 
+const validate = (formValues) => {
+    //console.log("VALIDATION: ", formValues)
+    const errors = {};
+    const email = 'email';
+    if(formValues[email]){
+        const check = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const text = formValues[email].toLowerCase();
+        const trimmedText = text.trim();
+        if(check.test(String(trimmedText))){
+            formValues['name'] = trimmedText;
+        }else{
+            formValues[email] = trimmedText;
+            errors[email] = 'Invalid E-mail';
+        }
+    }
+    if(!formValues[email]){
+        errors[email] = "Email is required";
+    }
+    return errors;
+}
+
+const mapStateToProps = (state) => {
+    return {
+        loader: state.loader
+    }
+}
+
+export default connect(mapStateToProps, { sendMail, showLoader })(reduxForm({
+    form: 'homePage',
+    validate
+})(Footer4));

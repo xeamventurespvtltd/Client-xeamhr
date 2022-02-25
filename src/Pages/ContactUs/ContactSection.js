@@ -2,7 +2,7 @@ import React from "react";
 import ContactForm from "./ContactForm"
 import Address from "./Address"
 
-const ContactSection = () => {
+const ContactSection = ({ showLoader, hideLoader }) => {
   return (
     <section className="contact-section">
       <div className="contact-text">
@@ -11,7 +11,7 @@ const ContactSection = () => {
       <div className="container-fluid contact-section-body py-4">
         <div className="row">
           <div className="col-md-6">
-            <ContactForm />
+            <ContactForm showLoader={showLoader} hideLoader={hideLoader} />
           </div>
           <div className="col-md-6">
             <Address />

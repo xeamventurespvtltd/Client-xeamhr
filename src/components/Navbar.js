@@ -11,8 +11,10 @@ const Navbar = ({ header, isSticky }) => {
       item.closest(".menu-body").classList.remove("show");
       e.preventDefault();
       // navigate to specific path
+      //console.log(item);
       const id = item.getAttribute("href").slice(1)
       const section = document.getElementById(id)
+      console.log("ITEM: ", item, "\n\nSECTION: ", section, "\n\nATTRIBUTE: ",item.getAttribute("href"), "\n\nID: ",id);
       let position = section.offsetTop;
       let NavBarHeight = NavBar.current.offsetHeight
       window.scrollTo({
@@ -33,8 +35,7 @@ const Navbar = ({ header, isSticky }) => {
           <i className="fas fa-bars"></i>
         </button>
 
-        <div className="menu-body collapse navbar-collapse" id="navbarSupportedContent"
-        >
+        <div className="menu-body collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li id="navLink"
               className="nav-item"

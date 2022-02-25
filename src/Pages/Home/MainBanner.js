@@ -1,11 +1,13 @@
 import React from "react"
 import Navbar from "../../components/Navbar"
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import useSticky from "../../components/UseSticky"
 const MainBanner = ({ heading, subHeading }) => {
   const { isSticky, element } = useSticky();
+  //console.log("ELEMENT: ", element)
   return (
-    <section id="home" className="main-banner">
+    <div>
+    <section className="main-banner">
       <Navbar
         header="headerHome"
         isSticky={isSticky}
@@ -26,6 +28,7 @@ const MainBanner = ({ heading, subHeading }) => {
         </div>
       </div>
     </section>
+    </div>
 
   )
 }
